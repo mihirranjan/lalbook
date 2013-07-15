@@ -1,0 +1,12 @@
+1.	Bid popup date picker for “No of days” field -view_browse (my work)
+2.	Verified / Not verified functionality -view_browse (my work)
+3.	Need to place the "Are you looking to supply? Signup for seller account" and 100 credits free image of post buy requirement screen on prelogin seller page http://demo.maventricks.com/lalbook/index.php/seller -view_browse(css work)
+4.	Prelogin buyer screen - Need to place the content given in attachment. And date picker icon to be placed on the right end of the text box.- view_post.. (css work)
+5.	Search module (my work)
+6.	Search option on the Browse page http://demo.maventricks.com/lalbook/index.php/seller (mywork)
+7.	Job title should be given link to detailed view on post login seller screen (my work)
+8.	“Past work” & “Work in progress” tabs are not working in both “Buyer view” and “Seller view” of “My business” tab(my work- now)
+9.	In “Seller view” of  “My business” tab, the “Title for seller” should be changed to just “Title” and it should have link to job detailed page. And “status” column should have corresponding value.(my work -now)
+10.	In “Buyer view” of  “My business” tab, the “Status” column dropdown should have “Awarded” value.(my work -now)
+11.	Need to add “Pending Feedback” tab in in both “Buyer view” and “Seller view” of “My business” tab to show the list of jobs to post feedbacks. (my work -now)
+12.	CSS alignment needs to be fixed in all the pages.

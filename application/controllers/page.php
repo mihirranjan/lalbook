@@ -1,0 +1,149 @@
+<?php 
+
+ /*
+  ****************************************************************************
+  ***                                                                      ***
+  ***      BIDONN 1.0                                                      ***
+  ***      File:  page.php                                                 ***
+  ***      Built: Mon June 13 16:25:15 2012                                ***
+  ***      http://www.maventricks.com                                      ***
+  ***                                                                      ***
+  ****************************************************************************
+  
+   <Bidonn>
+    Copyright (C) <2012> <Maventricks Technologies>.
+ 
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+	If you want more information, please email me at sathick@maventricks.com or 
+    contact us from http://www.maventricks.com/contactus
+*/
+
+class Page extends CI_Controller {
+
+	//Global variable  
+    public $outputData;	
+	public $loggedInUser;
+		
+	
+	 // Constructor 
+	 
+	function __construct()
+	{
+		parent::__construct();
+		
+		$this->load->library('settings');
+		
+        //Get Config Details From Db
+		$this->settings->db_config_fetch();
+		
+	   //Manage site Status 
+		if($this->config->item('site_status') == 1)
+		redirect('offline');
+ 		
+		//Load Models
+		$this->load->model('common_model');
+		$this->load->model('skills_model');
+		$this->load->model('page_model');
+		$this->load->model('contact_model');
+		$this->load->model('email_model');
+		
+		//Page Title and Meta Tags
+		$this->outputData = $this->common_model->getPageTitleAndMetaData();
+		
+		//Get Logged In user
+		$this->loggedInUser					= $this->common_model->getLoggedInUser();
+		$this->outputData['loggedInUser'] 	= $this->loggedInUser;
+		
+		//Get Footer content
+		$conditions = array('page.is_active'=> 1);
+		$this->outputData['pages']	=	$this->page_model->getPages($conditions);	
+		
+		//Get Latest jobs
+		$limit_latest = $this->config->item('latest_projects_limit');
+		$limit3 = array($limit_latest);
+		$this->outputData['latestJobs']	= $this->skills_model->getLatestJobs($limit3);
+		
+		//language file
+		$this->lang->load('enduser/common', $this->config->item('language_code'));
+		
+		//GeT current Page
+		$this->outputData['current_page'] = 'page';
+	}//Controller End 
+	// --------------------------------------------------------------------
+	
+	/**
+	 * Load static page.
+	 *
+	 * @access	public
+	 * @param	nil
+	 * @return	void
+	 */ 
+	function index()
+	{	
+		 
+	     	// load language
+		     $this->lang->load('enduser/common', $this->config->item('language_code'));
+		  	 $conditions = array('page.url'=> $this->uri->segment(2));
+			 $this->outputData['page_content']	=	$this->page_model->getPages($conditions);	
+				//print_r($this->uri->segment(2));exit;
+			 if($this->uri->segment(2)=='')	
+			 {
+				$this->session->set_flashdata('flash_message', $this->common_model->flash_message('error',$this->lang->line('error_message')));
+				redirect('information');
+			 }
+			 
+			
+			 if($this->uri->segment(2) == 'sitemap'){
+			 
+			 	//Get Latest jobs
+				$limit_latest = $this->config->item('latest_projects_limit');
+				$limit3 = array($limit_latest);
+				$this->outputData['latestJobs']	= $this->skills_model->getLatestJobs($limit3);
+				
+				//Get Categories
+				$this->outputData['categories']	=	$this->skills_model->getCategories();
+				
+			    $this->load->view('view_siteMap',$this->outputData);
+			}
+			 else	
+			   /* $this->load->view('view_page',$this->outputData);*/
+			   $this->load->view('view_privacy',$this->outputData);
+		
+	}//End of function
+//-----------------------------------------------------------------------	
+	
+	/**
+	 * Loads static page.
+	 *
+	 * @access	public
+	 * @param	nil
+	 * @return	void
+	 */
+	function view()
+	{
+	   // Check Page
+	   $page_url = $this->uri->segment(3);
+	 
+	   $conditions = array('page.url'=>$page_url);
+	   $this->outputData['page_content']	=	$this->page_model->getPages($conditions);	
+	    
+	  //Load View	
+	   $this->load->view('view_page',$this->outputData);
+	} //function view end 
+//-----------------------------------------------------------------------------
+
+}
+//End page Class
+/* End of file page.php */ 
+/* Location: ./application/controllers/page.php */

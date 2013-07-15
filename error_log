@@ -1,0 +1,146 @@
+[09-Jun-2012 07:38:38] PHP Fatal error:  Call to undefined function  dohash() in /home/maventri/public_html/demo/mavenbids/application/helpers/MY_form_helper.php on line 14
+[09-Jun-2012 07:54:24] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/models/user_model.php on line 847
+[11-Jun-2012 13:05:19] PHP Fatal error:  Cannot use object of type stdClass as array in /home/maventri/public_html/demo/mavenbids/application/models/user_model.php on line 34
+[12-Jun-2012 10:29:50] PHP Fatal error:  Call to undefined method CI_Config::db_config_fetch() in /home/maventri/public_html/demo/mavenbids/application/controllers/information.php on line 28
+[18-Jun-2012 09:46:14] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/view_siteMap.php on line 26
+[22-Jun-2012 12:39:14] PHP Fatal error:  Call to a member function updateTransaction() on a non-object in /home/maventri/public_html/demo/mavenbids/application/controllers/payment.php on line 721
+[22-Jun-2012 12:39:27] PHP Fatal error:  Call to a member function getTransactions() on a non-object in /home/maventri/public_html/demo/mavenbids/application/controllers/payment.php on line 863
+[28-Jun-2012 10:49:58] PHP Parse error:  syntax error, unexpected '}' in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 33
+[28-Jun-2012 10:50:58] PHP Fatal error:  Call to a member function logged_in() on a non-object in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 30
+[28-Jun-2012 13:09:06] PHP Fatal error:  Call to a member function logged_in() on a non-object in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 30
+[28-Jun-2012 13:09:14] PHP Fatal error:  Call to a member function logged_in() on a non-object in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 30
+[14-Jul-2012 08:34:30] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/controllers/administration/users.php on line 1409
+[17-Jul-2012 09:16:02] PHP Parse error:  syntax error, unexpected '<' in /home/maventri/public_html/demo/mavenbids/application/views/paypal/view_deposit.php on line 30
+[17-Jul-2012 09:16:37] PHP Parse error:  syntax error, unexpected '<' in /home/maventri/public_html/demo/mavenbids/application/views/paypal/view_deposit.php on line 30
+[24-Jul-2012 06:11:01] PHP Fatal error:  Cannot redeclare class Facebook in /home/maventri/public_html/demo/mavenbids/application/libraries/facebook.php on line 24
+[24-Jul-2012 06:44:36] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 56
+[24-Jul-2012 06:44:42] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 56
+[24-Jul-2012 06:46:16] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 56
+[24-Jul-2012 06:46:19] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 56
+[24-Jul-2012 06:46:36] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 56
+[24-Jul-2012 06:46:40] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 56
+[24-Jul-2012 06:46:45] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 56
+[24-Jul-2012 06:47:01] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 56
+[24-Jul-2012 07:13:22] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/controllers/home.php on line 119
+[24-Jul-2012 07:26:30] PHP Fatal error:  Call to undefined method Page_model::updatePage() in /home/maventri/public_html/demo/mavenbids/application/controllers/administration/page.php on line 228
+[24-Jul-2012 07:27:16] PHP Fatal error:  Call to undefined method Page_model::updatePage() in /home/maventri/public_html/demo/mavenbids/application/controllers/administration/page.php on line 228
+[24-Jul-2012 07:30:06] PHP Fatal error:  Call to undefined method Page_model::updatePage() in /home/maventri/public_html/demo/mavenbids/application/controllers/administration/page.php on line 228
+[24-Jul-2012 07:38:51] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 57
+[24-Jul-2012 07:38:52] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 57
+[24-Jul-2012 07:38:55] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 57
+[24-Jul-2012 07:43:48] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 57
+[24-Jul-2012 07:43:51] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 57
+[24-Jul-2012 07:43:57] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 57
+[24-Jul-2012 07:43:57] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 57
+[24-Jul-2012 07:44:02] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 57
+[24-Jul-2012 07:44:10] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 57
+[24-Jul-2012 07:44:10] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 57
+[24-Jul-2012 07:44:13] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 57
+[24-Jul-2012 07:44:14] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 57
+[24-Jul-2012 07:44:14] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 57
+[24-Jul-2012 07:44:14] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 57
+[24-Jul-2012 07:44:14] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 57
+[24-Jul-2012 07:44:14] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 57
+[24-Jul-2012 07:44:14] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 57
+[24-Jul-2012 07:44:14] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 57
+[24-Jul-2012 07:44:48] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 57
+[24-Jul-2012 07:44:58] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 57
+[24-Jul-2012 07:45:03] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 57
+[24-Jul-2012 07:45:17] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 57
+[24-Jul-2012 07:45:35] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 57
+[24-Jul-2012 07:45:52] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 57
+[24-Jul-2012 07:45:57] PHP Parse error:  syntax error, unexpected T_IF in /home/maventri/public_html/demo/mavenbids/application/views/header.php on line 57
+[24-Jul-2012 07:52:12] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/controllers/home.php on line 44
+[24-Jul-2012 08:10:41] CSRF state token does not match one provided.
+[24-Jul-2012 09:40:28] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/view_facebook.php on line 16
+[24-Jul-2012 09:40:31] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/view_facebook.php on line 16
+[24-Jul-2012 09:40:37] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/view_facebook.php on line 16
+[24-Jul-2012 09:40:39] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/view_facebook.php on line 16
+[24-Jul-2012 09:40:39] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/view_facebook.php on line 16
+[24-Jul-2012 09:41:05] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/view_facebook.php on line 15
+[24-Jul-2012 09:41:10] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/view_facebook.php on line 15
+[24-Jul-2012 09:42:14] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/view_facebook.php on line 16
+[24-Jul-2012 09:42:17] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/view_facebook.php on line 16
+[24-Jul-2012 09:42:20] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/view_facebook.php on line 16
+[24-Jul-2012 09:42:20] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/view_facebook.php on line 16
+[24-Jul-2012 09:42:20] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/view_facebook.php on line 16
+[24-Jul-2012 09:42:48] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/view_facebook.php on line 15
+[24-Jul-2012 09:43:17] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/view_facebook.php on line 11
+[24-Jul-2012 10:16:08] CSRF state token does not match one provided.
+[24-Jul-2012 11:11:38] CSRF state token does not match one provided.
+[24-Jul-2012 11:12:36] CSRF state token does not match one provided.
+[24-Jul-2012 11:15:08] CSRF state token does not match one provided.
+[24-Jul-2012 11:31:09] CSRF state token does not match one provided.
+[24-Jul-2012 12:15:53] PHP Fatal error:  Call to a member function getUser() on a non-object in /home/maventri/public_html/demo/mavenbids/application/controllers/home.php on line 120
+[24-Jul-2012 12:55:10] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/employee/view_topEmployee.php on line 76
+[24-Jul-2012 12:55:12] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/employee/view_topEmployee.php on line 76
+[24-Jul-2012 12:55:15] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/employee/view_topEmployee.php on line 76
+[24-Jul-2012 12:55:22] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/employee/view_topEmployee.php on line 76
+[24-Jul-2012 12:55:25] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/employee/view_topEmployee.php on line 76
+[24-Jul-2012 12:55:25] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/employee/view_topEmployee.php on line 76
+[24-Jul-2012 12:55:25] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/employee/view_topEmployee.php on line 76
+[24-Jul-2012 12:55:25] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/employee/view_topEmployee.php on line 76
+[24-Jul-2012 12:55:25] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/employee/view_topEmployee.php on line 76
+[24-Jul-2012 12:55:25] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/employee/view_topEmployee.php on line 76
+[24-Jul-2012 12:55:26] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/employee/view_topEmployee.php on line 76
+[24-Jul-2012 12:55:26] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/employee/view_topEmployee.php on line 76
+[24-Jul-2012 12:55:26] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/employee/view_topEmployee.php on line 76
+[24-Jul-2012 12:55:26] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/employee/view_topEmployee.php on line 76
+[24-Jul-2012 12:55:26] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/employee/view_topEmployee.php on line 76
+[24-Jul-2012 12:55:26] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/employee/view_topEmployee.php on line 76
+[24-Jul-2012 12:55:26] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/employee/view_topEmployee.php on line 76
+[24-Jul-2012 12:55:26] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/employee/view_topEmployee.php on line 76
+[24-Jul-2012 12:55:28] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/employee/view_topEmployee.php on line 76
+[24-Jul-2012 12:55:28] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/employee/view_topEmployee.php on line 76
+[24-Jul-2012 12:55:28] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/employee/view_topEmployee.php on line 76
+[24-Jul-2012 12:55:28] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/employee/view_topEmployee.php on line 76
+[24-Jul-2012 12:55:28] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/employee/view_topEmployee.php on line 76
+[24-Jul-2012 12:55:28] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/employee/view_topEmployee.php on line 76
+[24-Jul-2012 12:55:28] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/employee/view_topEmployee.php on line 76
+[24-Jul-2012 12:55:28] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/employee/view_topEmployee.php on line 76
+[24-Jul-2012 12:55:28] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/employee/view_topEmployee.php on line 76
+[24-Jul-2012 12:55:28] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/employee/view_topEmployee.php on line 76
+[24-Jul-2012 12:55:28] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/employee/view_topEmployee.php on line 76
+[24-Jul-2012 12:55:28] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/employee/view_topEmployee.php on line 76
+[24-Jul-2012 12:55:28] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/mavenbids/application/views/employee/view_topEmployee.php on line 76
+[24-Jul-2012 14:35:11] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting ',' or ';' in /home/maventri/public_html/demo/mavenbids/application/views/search/view_searchJob.php on line 23
+[24-Jul-2012 14:39:30] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting ',' or ';' in /home/maventri/public_html/demo/mavenbids/application/views/search/view_searchJob.php on line 23
+[24-Jul-2012 15:14:54] PHP Parse error:  syntax error, unexpected '!' in /home/maventri/public_html/demo/mavenbids/application/controllers/search.php on line 145
+[07-Jan-2013 07:31:16] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 3056 bytes) in /home/maventri/public_html/demo/bidonn_1.1/application/helpers/MY_file_helper.php on line 321
+[11-Jan-2013 01:29:59] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/maventri/public_html/demo/bidonn_1.1/application/views/job/view_createJob.php on line 265
+[11-Jan-2013 01:29:59] PHP Parse error:  syntax error, unexpected T_STRING in /home/maventri/public_html/demo/bidonn_1.1/application/views/job/view_createJob.php on line 265
+[11-Jan-2013 01:32:07] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/maventri/public_html/demo/bidonn_1.1/application/views/job/view_createJob.php on line 250
+[11-Jan-2013 01:32:07] PHP Parse error:  syntax error, unexpected T_PRIVATE, expecting ')' in /home/maventri/public_html/demo/bidonn_1.1/application/views/job/view_createJob.php on line 250
+[16-Jan-2013 04:47:02] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/maventri/public_html/demo/bidonn_1.1/application/views/members/view_memberList.php on line 69
+[16-Jan-2013 04:47:02] PHP Parse error:  syntax error, unexpected '<' in /home/maventri/public_html/demo/bidonn_1.1/application/views/members/view_memberList.php on line 69
+[16-Jan-2013 04:47:03] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/maventri/public_html/demo/bidonn_1.1/application/views/members/view_memberList.php on line 142
+[16-Jan-2013 04:47:03] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/bidonn_1.1/application/views/members/view_memberList.php on line 142
+[17-Jan-2013 01:42:31] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/maventri/public_html/demo/bidonn_1.1/application/views/job/view_job.php on line 315
+[17-Jan-2013 01:42:31] PHP Parse error:  syntax error, unexpected $end in /home/maventri/public_html/demo/bidonn_1.1/application/views/job/view_job.php on line 315
+[19-Jan-2013 02:05:34] PHP Fatal error:  Class 'Common_model' not found in /home/maventri/public_html/demo/bidonn_1.1/system/core/Loader.php on line 303
+[20-Jan-2013 23:48:06] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/maventri/public_html/demo/bidonn_1.1/application/views/cancel/view_openCases.php on line 69
+[20-Jan-2013 23:51:53] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/maventri/public_html/demo/bidonn_1.1/application/views/cancel/view_openCases.php on line 69
+[20-Jan-2013 23:52:06] PHP Parse error:  syntax error, unexpected '/' in /home/maventri/public_html/demo/bidonn_1.1/application/views/cancel/view_openCases.php on line 69
+[20-Jan-2013 23:52:07] PHP Parse error:  syntax error, unexpected '/' in /home/maventri/public_html/demo/bidonn_1.1/application/views/cancel/view_openCases.php on line 69
+[20-Jan-2013 23:52:07] PHP Parse error:  syntax error, unexpected '/' in /home/maventri/public_html/demo/bidonn_1.1/application/views/cancel/view_openCases.php on line 69
+[20-Jan-2013 23:53:42] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/maventri/public_html/demo/bidonn_1.1/application/views/cancel/view_openCases.php on line 115
+[20-Jan-2013 23:53:47] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/maventri/public_html/demo/bidonn_1.1/application/views/cancel/view_openCases.php on line 115
+[20-Jan-2013 23:53:48] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/maventri/public_html/demo/bidonn_1.1/application/views/cancel/view_openCases.php on line 115
+[20-Jan-2013 23:53:48] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/maventri/public_html/demo/bidonn_1.1/application/views/cancel/view_openCases.php on line 115
+[20-Jan-2013 23:53:48] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/maventri/public_html/demo/bidonn_1.1/application/views/cancel/view_openCases.php on line 115
+[20-Jan-2013 23:53:48] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/maventri/public_html/demo/bidonn_1.1/application/views/cancel/view_openCases.php on line 115
+[20-Jan-2013 23:53:48] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/maventri/public_html/demo/bidonn_1.1/application/views/cancel/view_openCases.php on line 115
+[20-Jan-2013 23:53:48] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/maventri/public_html/demo/bidonn_1.1/application/views/cancel/view_openCases.php on line 115
+[21-Jan-2013 02:12:53] PHP Warning:  Unterminated comment starting line 3 in /home/maventri/public_html/demo/bidonn_1.1/application/controllers/users.php on line 3
+[21-Jan-2013 02:12:53] PHP Fatal error:  fatal flex scanner internal error--end of buffer missed in /home/maventri/public_html/demo/bidonn_1.1/application/controllers/users.php on line 3
+[21-Jan-2013 05:18:17] PHP Fatal error:  Call to undefined method CI_DB_mysql_result::results() in /home/maventri/public_html/demo/bidonn_1.1/application/views/admin/settings/view_siteSettings.php on line 80
+[21-Jan-2013 07:07:18] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home/maventri/public_html/demo/bidonn_1.1/application/controllers/job.php on line 3309
+[21-Jan-2013 07:07:25] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home/maventri/public_html/demo/bidonn_1.1/application/controllers/job.php on line 3309
+[22-Jan-2013 02:02:35] PHP Warning:  Unterminated comment starting line 1663 in /home/maventri/public_html/demo/bidonn_1.1/application/models/skills_model.php on line 1663
+[22-Jan-2013 02:02:35] PHP Fatal error:  fatal flex scanner internal error--end of buffer missed in /home/maventri/public_html/demo/bidonn_1.1/application/models/skills_model.php on line 1663
+[22-Jan-2013 05:21:52] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/maventri/public_html/demo/bidonn_1.1/application/views/job/view_manageJob.php on line 81
+[22-Jan-2013 05:21:52] PHP Parse error:  syntax error, unexpected T_STRING in /home/maventri/public_html/demo/bidonn_1.1/application/views/job/view_manageJob.php on line 81
+[22-Jan-2013 08:50:46] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/maventri/public_html/demo/bidonn_1.1/application/helpers/bids_helper.php on line 206
+[22-Jan-2013 08:50:46] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/maventri/public_html/demo/bidonn_1.1/application/helpers/bids_helper.php on line 206
+[23-Jan-2013 00:09:57] PHP Parse error:  syntax error, unexpected ';', expecting T_FUNCTION in /home/maventri/public_html/demo/bidonn_1.1/application/controllers/owner.php on line 1301
+[23-Jan-2013 00:11:15] PHP Parse error:  syntax error, unexpected ';', expecting T_FUNCTION in /home/maventri/public_html/demo/bidonn_1.1/application/controllers/owner.php on line 1301

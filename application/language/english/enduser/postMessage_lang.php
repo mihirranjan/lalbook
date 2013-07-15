@@ -1,0 +1,30 @@
+<?php
+$lang['Job Message Board']	            	    = 'Job Message Board';
+$lang['Job']								    = 'Job';
+$lang['Post Message']							= 'Post Message';
+$lang['To']										= 'To';
+$lang['Everyone']								= 'Everyone';
+$lang['From']								    = 'From';
+$lang['Private Messsage']						= 'Private Messsage';
+$lang['Note: Only private message to programmer'] = '[ Note: Please enter Employee id for private message with comma separate operator ]';
+$lang['Select Job']							    = 'Select Job';
+$lang['Select Owner']							= 'Select Owner';
+$lang['Select Employee']						= 'Select Employee';
+$lang['message_validation']						= 'Message';
+$lang['employee_validation']					= 'To';
+$lang['job_validation']				    	    = 'Project';
+
+$lang['You must be logged in as a employee to post messages on the Job Message Board']	= 'You must be logged in as a employee to post messages on the Job Message Board';
+$lang['Your Message Has Been Posted Successfully']						                = 'Your message has been posted successfully';
+$lang['You must be logged to post messages on the Job Message Board']			    	= 'You must be logged to post messages on the Job Message Board';
+$lang['You must be post job to invite employees']		    			                = 'You must be post job to invite employees';
+$lang['You must be logged to invite employees']					                        = 'You must be logged to invite employees';
+$lang['There is no open job to Post Mail']	                                            = 'There is no open job to Post Mail';
+$lang['You are currently logged in as'] ='You are currently logged in as';
+$lang['Tip']='Tip: You can post programming code by placing it within [code] and [/code] tags.'; 
+$lang['Submit']='Submit';
+$lang['Preview']='Preview';
+$lang['Hide']='Hide';
+$lang['Show']='Show';
+$lang['You are currently logged in as']='You are currently logged in as';
+$lang['Job']  = 'Job Name';

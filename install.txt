@@ -1,0 +1,37 @@
+Installation Steps:
+
+1. Upload all files in the archieve to the root directory or subdirectory (i.e yoursite.com/site).
+
+
+2. Run the /install directory to install the system (i.e yoursite.com/site/install)
+
+Manual Installation
+
+1.Edit the file application/config/config.php and edit your mysql details in the following lines:
+
+$config['hostname'] = "hostname";
+$config['db_username'] = "mysqluser";
+$config['db_password'] = "mysqlpass";
+$config['db'] = "mysqlDB";
+
+2.$config['base_url'] = "Site URL "; (i.e yoursite.com/site)
+
+3. In PhpMyAdmin, import the file install/bidonn.sql to create the database structure.
+
+
+4. Change the permission of the following folders and its subdirectories to 0777:
+
+/files/logos
+
+/files/portfolios
+/files/job_attachment
+/files/site_logo
+/files/tempFiles
+/install
+/application/config
+
+5.You are done
+
+ 
+
+6. To access the admin panel /administration (i.e yoursite.com/site/index.php/administration), login with user: admin pass: admin on the main member login page

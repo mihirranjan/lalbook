@@ -1,0 +1,870 @@
+<div class="Container">
+<?php $this->load->view('header'); ?>
+<?php //$this->load->view('sidebar'); ?>
+
+
+<!--MAIN-->
+<style type="text/css">
+.buttonPostBid {
+    background: url("<?php echo image_url('award_icon.jpg');?>") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    font-size: 0px;
+    height: 29px;
+    line-height: 29px;
+	margin:3px 0 0;
+  /*  margin: 0 0 0 20px;*/
+	padding:0;
+    text-align: center;
+    text-transform: capitalize;
+    width: 84px;
+	height:30px;
+	cursor:pointer;
+}
+#tabs ul li {
+   width: auto!important;
+}
+</style>
+
+<link href="<?php echo base_url(); ?>application/css/css/bidpopup.css" rel="stylesheet" type="text/css" /> 
+	<link rel="stylesheet" type="text/css" media="all" href="<?php echo base_url();?>application/css/css/popupstyle.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/appliation/css/css/exon.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/application/css/css/msgpop.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/application/css/css/msgtobidder.css" />
+ <link rel="stylesheet" href="<?php echo base_url();?>css/jquery-ui.css" />
+ <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/application/css/css/amoutedit.css" />
+    <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+	<script type="text/javascript" src='<?php echo base_url();?>application/js/fornotlogin.js'></script>
+		<script type="text/javascript" src='<?php echo base_url();?>application/js/msgtobidder.js'></script>
+	<script type="text/javascript" src='<?php echo base_url();?>application/js/messagepop.js'></script>
+	<script type="text/javascript" src='<?php echo base_url();?>application/js/bidpopup.js'></script>
+	<script type="text/javascript" src="<?php echo base_url();?>application/js/editamt.js"></script>
+	<script src="http://maps.google.com/maps?file=api&v=2&key=AIzaSyDKYyWeq_uHVSE-n7aNXeQaEc2n31WX2pE" type="text/javascript"></script>
+	
+    <script>
+	$j= jQuery.noConflict();
+    $j(function() {
+        $j( "#tabs" ).tabs();
+    });
+    </script>
+	<link type="text/css" href="<?php echo base_url();?>application/css/css/jquery.datepick.css" rel="stylesheet">
+<script type="text/javascript" src="<?php echo base_url();?>application/js/jquery.datepick.js"></script>
+<script type="text/javascript">
+$(function() {
+	$j('#help-us-deliverdate').datepick();
+	$j('#inlineDatepicker').datepick({onSelect: showDate});
+	
+	
+  
+});
+
+function showDate(date) {
+	alert('The date chosen is ' + date);
+}
+</script>
+
+	<script type="text/javascript">
+	$(document).ready(function(){
+	$('.place').click(function() {
+    var id = $(this).attr('id');
+	var logeduserid = $("#userid").val();
+	//alert(logeduserid);biduserid
+	var biduser=$("#biduserid").val();
+	var jobids=$("#jobid").val();
+	var jobemail=$("#emails").val();
+	var usercredits=$("#usercredit").val();
+	var jobnamee=$("#jobname").val();
+	var bidder=$("#bidderemail").val();
+	//alert(usercredits);
+	var tojob=$("#toidjob").val();
+	var bidername=$("#biddername").val();
+	var bidamount=$("#bidamount").val();
+	var jobbudget=$("#jobamount").val();
+	
+	//alert(tojob);
+	$("#bidid").val(jobids);
+	$("#jobid").val(jobids);
+	$("#bidjob").val(biduser);
+	$("#fromid").val(biduser);
+	$("#toid").val(tojob);
+	$("#usrmailid").val(jobemail);
+	$("#tomail").val(jobemail);
+	$("#usercr").val(usercredits);
+	$("#jobnames").val(jobnamee);
+	$("#bideremail").val(bidder);
+	$("#biddernamee").val(bidername);
+	$("#jobamt").val(jobbudget);
+	
+	
+   // alert(logeduserid);
+});
+$('.msgcls').click(function() {
+    var id = $(this).attr('id');
+	var logeduserid = $("#userid").val();
+	//alert(logeduserid);biduserid
+	var biduser=$("#biduserid").val();
+	var jobids=$("#jobid").val();
+	var jobemail=$("#emails").val();
+	var usercredits=$("#usercredit").val();
+	//alert(usercredits);
+	var tojob=$("#toidjob").val();
+	var bidemail=$("#bidderemail").val();
+	//alert(tojob);
+	$("#bidid").val(jobids);
+	$("#jobidss").val(jobids);
+	$("#bidjob").val(biduser);
+	$("#fromid").val(biduser);
+	$("#toid").val(tojob);
+	$("#usrmailid").val(jobemail);
+	$("#tomail").val(jobemail);
+	$("#usercr").val(usercredits);
+	$("#biddermailid").val(bidemail);
+	
+   // alert(logeduserid);
+});
+$('.tomsg').click(function() {
+    var id = $(this).attr('id');
+	var logeduserid = $("#userid").val();
+	//alert(logeduserid);biduserid
+	var biduser=$("#biduserjob").val();
+	//alert(biduser);
+	var jobids=$("#jobid").val();
+	var jobemail=$("#emails").val();
+	var usercredits=$("#usercredit").val();
+	//alert(usercredits);
+	var tojob=$("#toidjob").val();
+	var bidemail=$("#bidderemail").val();
+	//alert(tojob);
+	$("#bidid").val(jobids);
+	$("#ujobidss").val(jobids);
+	$("#bidjob").val(biduser);
+	$("#fromuid").val(biduser);
+	$("#touid").val(tojob);
+	$("#usrmailid").val(jobemail);
+	$("#toemail").val(jobemail);
+	$("#usercr").val(usercredits);
+	$("#bidderumailid").val(bidemail);
+	
+   // alert(logeduserid);
+});
+$('.amtedit').click(function() {
+var editedamt = $("#awardamt").val();
+$(".amttoaward").val(editedamt);
+var bidsid=$("#bidtblid").val();
+$("#bidsid").val(bidsid);
+});
+});
+</script>
+
+	<form method="post"  id="msgform" class="msgform" style="display:none; top:200px" action="">  
+		<div class='msgformwrapper'>
+			<div class="ajaxpopforminner">
+			<h2>Send Your Message  <a class="button canceld"><span class="inner"><img src="<?php echo image_url();?>close.png" /></span></a></h2>
+			<input type="hidden" id="toid" name="hidden_toid"/>
+			<input type="hidden" id="fromid" name="hidden_fromid"/>
+			<input type="hidden" id="jobidss" name="hidden_jobid"/>
+			<input type="hidden" id="tomail" name="hidden_tomail" />
+			<input type="hidden" id="biddermailid" name="hidden_bidermail" />
+
+			<fieldset>
+			<label for="help-us-email">Message to the buyer:</label>
+			<div class="field"><textarea  name="desc" id="help-us-desc" cols="10" rows="10"></textarea></div>
+			</fieldset>
+			<!-- <fieldset>
+			<!--<label for="help-us-email">--><!--we will send your contact details along with your quoted price to this buyer..</label>
+			</fieldset>-->
+
+			</div>
+			<div class="buttons">
+			<div class="submit-msg" style="text-align: center;width: 77px;margin: 0 auto;"><input type="submit" class="button form-submit-msg clsBut" name="Complete This Bid" value="send"/><!--<span class="inner">Send</span>--></div>
+		</div>
+		</div>    
+		<!-- Toggle and show this on success -->
+		<div style="display:none" id="msgform-success">
+			<div class="">
+			<h2>Thank you For Your Message</h2>
+			<h4>we will send  your Message to this user..</h4>
+			</div>
+			<div class="buttons">
+			<a class="button canceld"><span class=""><img src="<?php echo image_url();?>closeButton.png" /></span></a>
+			</div>
+		</div>
+	</form>
+	 
+	<form method="post"  id="amountedit" class="amountedit" style="display:none; top:200px" action="">  
+
+		<div class='amtformwrapper'>
+			<div class="ajaxpopforminner">
+			<h2>Award An Amount:  <a class="button closebutn"><span class="inner"><img src="<?php echo image_url();?>close.png" /></span></a></h2>
+			<input type="hidden"  id="bidsid" name="hidden_bidamnt" />
+
+			<fieldset>
+			<label for="help-us-email">Awarded Amount:</label>
+			<div class="field"><input type="text" name="editdamount" id="help-us-editdamount" value="" class="amttoaward"/></div>
+			</fieldset>
+			<!-- <fieldset>
+			<!--<label for="help-us-email">--><!--we will send your contact details along with your quoted price to this buyer..</label>
+			</fieldset>-->
+
+			</div>
+			<div class="buttons">
+			<div class="submit-amt" style="text-align: center;width: 77px;margin: 0 auto;"><input type="submit"   id="tomsg" class="button form-submit-amt clsBut" name="Complete This Bid" value="send"/><!--<span class="inner">Send</span>--></div>
+
+
+			</div>
+		</div>    
+	
+		<!-- Toggle and show this on success -->
+		<div style="display:none" id="amtform-success">
+			<div class="">
+			<h2>Your Amount Is Changed</h2>
+			<h4>we will send the Details to this user..</h4>
+			</div>
+			<div class="buttons">
+			<a class="button closebutn"><span class=""><img src="<?php echo image_url();?>closeButton.png" /></span></a>
+			</div>
+		</div>
+	</form>
+
+	<form method="post"  id="tobiddmsgform" class="tobiddmsgform" style="display:none; top:200px" action="">  
+		<div class='tomsgformwrapper'>
+			<div class="ajaxpopforminner">
+			<h2>Send Your Message  <a class="button canceldd"><span class="inner"><img src="<?php echo image_url();?>close.png" /></span></a></h2>
+			<input type="hidden" id="touid" name="hidden_touid"/>
+			<input type="hidden" id="fromuid" name="hidden_fromuid"/>
+			<input type="hidden" id="ujobidss" name="hidden_ujobid"/>
+			<input type="hidden" id="toemail" name="hidden_toemail" />
+			<input type="hidden" id="bidderumailid" name="hidden_biderumail" />
+
+			<fieldset>
+			<label for="help-us-email">Message to the BidUser:</label>
+			<div class="field"><textarea  name="descrpt" id="help-us-descrpt" cols="10" rows="3"></textarea></div>
+			</fieldset>
+			<!-- <fieldset>
+			<!--<label for="help-us-email">--><!--we will send your contact details along with your quoted price to this buyer..</label>
+			</fieldset>-->
+
+			</div>
+			<div class="buttons">
+			<div class="submit-tomsg" style="text-align: center;width: 77px;margin: 0 auto;"><input type="submit"   id="tomsg" class="button form-submit-tomsg clsBut" name="Complete This Bid" value="send"/><!--<span class="inner">Send</span>--></div>
+
+
+			</div>
+		</div>    
+	<!-- Toggle and show this on success -->
+		<div style="display:none" id="tomsgform-success">
+		<div class="">
+		<h2>Thank you For Your Message</h2>
+		<h4>we will send your Message  to this user..</h4>
+		</div>
+		<div class="buttons">
+		<a class="button canceldd"><span class=""><img src="<?php echo image_url();?>closeButton.png" /></span></a>
+		</div>
+		</div>
+	</form>
+
+	<form method="post"  id="bidform" class="bidform" style="display:none; top:200px" action="">  
+
+		<div class='bidformwrapper'>
+		<div class="ajaxpopforminner">
+		<h2>Place Your Bid  <a class="button cancel"><span class="inner"><img src="<?php echo image_url();?>close.png" /></span></a></h2>
+		<input type="hidden" id="bidid" name="hidden_bidid"/>
+		<input type="hidden" id="bidjob" name="hidden_userid"/>
+		<input type="hidden" id="usrmailid" name="hidden_mail"/>
+		<input type="hidden" id="usercr" name="hidden_credit" />
+		<input type="hidden" id="jobnames" name="hidden_jobname" />
+		<input type="hidden" id="bideremail" name="hidden_bideremail" />
+		<input type="hidden" id="biddernamee" name="hidder_bidername" />
+		<input type="hidden" id="jobamt" name="hidden_jobamount" />  
+
+		<fieldset>
+		<label for="help-us-email">Quote Your Price(All price in Rs.)*:</label>
+		<div class="field"><input type="text" name="bidamount" id="help-us-bidamount" value="" /></div>
+		</fieldset>
+		<fieldset>
+		<label for="help-us-email">Enter End-Date*:</label>
+		<div class="field"><input type="text" name="deliverdate" id="help-us-deliverdate" class="popupDatepicker"  value=""  /></div>
+		</fieldset>
+		
+		<fieldset>
+		<label for="help-us-email">Message to the buyer(Optional):</label>
+		<div class="field"><textarea  name="desc" id="help-us-desc" cols="10" rows="10"></textarea></div>
+		</fieldset>
+		<!-- <fieldset>
+		<!--<label for="help-us-email">--><!--we will send your contact details along with your quoted price to this buyer..</label>
+		</fieldset>-->
+
+		</div>
+		<div class="buttons">
+		<div class="submit-bid" style="text-align: center;width: 77px;margin: 0 auto;"><input type="submit" class="button form-submit-bid clsBut" name="Complete This Bid" value="send"/><!--<span class="inner">Send</span>--></div>
+		<p style="clear: both; font-weight: bold; padding: 10px 0px; text-align: center; margin: 0px 50px;">*1 credit point will be deducted From your bidding credit</p>
+
+		</div>
+		</div>    
+		<!-- Toggle and show this on success -->
+		<div style="display:none" id="bidform-success">
+		<div class="">
+		<h2>Thank you For Your Bid</h2>
+		<h4>we will send  your quoted price</h4>
+		</div>
+		<div class="buttons">
+		<a class="button cancel"><span class=""><img src="<?php echo image_url();?>closeButton.png" /></span></a>
+		</div>
+		</div>
+	</form>
+
+	<form method="post"  id="nologin" class="nobidform bidform" style="display:none" action="">  
+		<!--<div id="nologin" style="display:none" class="nobidform">-->
+		<div class='bidformwrapper'>
+		<div class="ajaxpopforminner" style=" background: none repeat scroll 0 0 #fff !important; min-height: 100px; text-align: center;padding:10px;line-height:30px;">
+		<h3> <a class="button close"><span class="inner" style="padding:0 0 5px !important;">
+		<img src="<?php echo image_url();?>close_but.png" /></span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please<br /> Login To Place<br /> Your Bid </h3>
+		</div> 
+		</div>
+	</form>
+
+	<?php
+
+	if(isset($bids) and $bids->num_rows()>0){
+		foreach($bids->result() as $bid){
+			$bidid=$bid->job_id;
+		
+		}
+	}
+	//Get Job Info
+	if(isset($this->loggedInUser->id)){
+		$bid = $bids->row();
+
+		if(is_object($bid))
+			$action = site_url('job/editBid'.$bidid);
+		else
+			$action = site_url('job/createBid/');
+	}
+	$job = $jobs->row();
+?>
+
+
+
+
+<div class="clsMinContent clearfix">
+<?php //$this->load->view('sidebar'); ?>
+<div id="selMain clearfix"> 
+     <!-- RC -->
+    <div class="block">
+      <div class="main_t">
+        <div class="main_r">
+          <div class="main_b">
+            <div class="main_l">
+              <div class="main_tl">
+                <div class="main_tr">
+                  <div class="main_bl">
+                    <div class="main_br">
+                      <div class="cls100_p">
+						
+						<div id="Innermain">
+						<!--POST JOB-->
+						<div class="clsInnerpageCommon">        
+                            <div class="clsInnerCommon">
+								<?php
+								//Show Flash error Message
+								if($msg = $this->session->flashdata('flash_message')){
+									echo $msg;
+								}
+
+							
+
+								?>
+				<div class="clsViewPost clearfix">
+					<div class="clsLeftPost">
+	  
+									<div class="clsHeads clearfix">
+										<div class="clsHeadingLeft clsFloatLeft">
+											<h2><?php echo $this->lang->line('Job');?>: <?php echo $job->looking_for; ?></h2><? //}else {?>
+										</div>
+										<div class="clsHeadingRight clsFloatRight"></div>
+									</div>
+                          <div class="clsTopPosting clearfix">
+							<ul class="clearfix">
+								<li>
+									<div class="clsLikePost clearfix">
+						
+						  <?php
+							$userid=$job->creator_id;
+							$q = "SELECT * FROM users WHERE id = $userid";
+							$query = $this->db->query($q,array($job->creator_id));
+							$ncomments = $query->result_array();
+	   
+							if(isset($ncomments[0]['logo'])){
+							$blog_e->n_comments = $ncomments[0]['logo'];
+							}
+							if(isset($ncomments[0]['city'])){
+							$blog_e->n_commentss = $ncomments[0]['city'];
+							}
+							if(isset($ncomments[0]['state']))
+							{
+							$blog_e->state = $ncomments[0]['state'];
+							}
+							if(isset($ncomments[0]['user_verify']))
+							{
+							$blog->verifyuser=$ncomments[0]['user_verify'];
+							}
+							if(isset($ncomments[0]['email']))
+							{
+							$blog->email=$ncomments[0]['email'];
+							}
+
+							if(isset($ncomments[0]['logo'])){
+							?>
+								<img  style="border: 1px solid #E6E6E6;" src="<?php echo base_url();?>files/logos/<?php echo $blog_e->n_comments;?>" height="100" width="100" />
+							<?php 
+							}
+							
+							if(!isset($ncomments[0]['logo'])){
+								echo '<img  style="border: 1px solid #E6E6E6;" src="'.image_url('no-image.jpg').'" width="50" height="50" />';
+							}
+
+							?>
+						
+						
+						
+							<div class="clsLikePostDet"> 
+
+							<p class="clsAuthornm">				  
+							<span> 
+							<?php 
+							$qr= "SELECT SUM(rating) AS rating,COUNT(id) as reviews FROM reviews WHERE userid = $userid";
+							$querys = $this->db->query($qr,array($job->creator_id));
+							$ncommentss = $querys->result_array();
+							$blog_e->n_comments = $ncommentss[0]['rating'];
+							$blog_e->n_commentse = $ncommentss[0]['reviews'];
+							$count=$blog_e->n_commentse;
+							if($count>1) {
+								$Totalbid=$blog_e->n_comments;
+								$ratings=$Totalbid/5;
+							}
+							else{
+								$ratings=$blog_e->n_comments;
+							}
+							?>
+							
+							<?php 
+							
+								if(($ratings<0) && ($ratings==0)){ echo "0yellow.png"; } 
+								elseif(($ratings>0) && ($ratings<1)) { echo "0_5yellow.png";} 
+								elseif(($ratings>1) && ($ratings<2)) {  echo "1_5yellow.png"; } 
+								elseif(($ratings>2) && ($ratings<3)) {  echo "2_5yellow.png"; } 
+								elseif(($ratings>3) && ($ratings<4)) {  echo "3_5yellow.png"; } 
+								elseif(($ratings>4) && ($ratings<5)) {  echo "4_5yellow.png"; } 
+								elseif($ratings>5) {  echo "5yellow.png"; } elseif(($ratings==1)){  echo  "1yellow.png"; } 
+								elseif(($ratings==2)){  echo  "2yellow.png"; } elseif(($ratings==3)){  echo  "3yellow.png"; } 
+								elseif(($ratings==4)){  echo  "4yellow.png"; } elseif(($ratings==5)){  echo  "5yellow.png"; }
+							?>
+
+							<?php 
+							if($count>1) {
+								$Totalbid=$blog_e->n_comments;
+								$ratings=$blog_e->n_comments/$blog_e->n_commentse;
+								
+								?>
+								<img src="<?php echo image_url();?>/<?php 
+									if(($ratings>1) && ($ratings<2)) {  echo "1_5yellow.png"; } 
+									elseif(($ratings>2) && ($ratings<3)) {  echo "2_5yellow.png"; } 
+									elseif(($ratings>3) && ($ratings<4)) {  echo "3_5yellow.png"; } 
+									elseif(($ratings>4) && ($ratings<5)) {  echo "4_5yellow.png"; } 
+									elseif($ratings>5) {  echo "5yellow.png"; } elseif(($ratings==1)){  echo  "1yellow.png"; } 
+									elseif(($ratings==2)){  echo  "2yellow.png"; } elseif(($ratings==3)){  echo  "3yellow.png"; } 
+									elseif(($ratings==4)){  echo  "4yellow.png"; } elseif(($ratings==5)){  echo  "5yellow.png"; } ?>" />
+								<?php 
+							}else{
+								$ratings=$ncommentss[0]['rating'];
+								$blog_e->n_comments =$ncommentss[0]['rating'];
+								?>
+
+								<img src="<?php echo image_url();?>/<?php 
+								if(($blog_e->n_comments<0) || ($blog_e->n_comments==0)  || ($ratings==NULL)){ echo "0yellow.png"; } 
+								elseif(($ratings>0) || ($ratings<1)) { echo "0_5yellow.png";}  ?>" />
+								<?php 	
+							}
+							?>
+
+
+							<!--<span><?php echo $ratings;?>/5</span>--></span>
+							<a href="<?php echo site_url('users/view/'.$job->creator_id);?>"><?php echo $job->user_name;?></a></p>
+
+							<p>Location :
+							<?php  echo $result_sta = (isset($blog_e->state)) ? $blog_e->state :"N/A";?>,
+							<?php  echo $result_com = (isset($blog_e->n_commentss)) ? $blog_e->n_commentss :"N/A";?>
+							</p> 
+
+							<p class="clsNoBorder">Posted  by <span><?php echo date('l,M d',$job->created)?></span> </p>
+							<p><span class="review">
+							<a href="<?php echo site_url('users/view/'.$job->creator_id);?>#tabs-3">
+							<?php echo $blog_e->n_commentse;?> Reviews</a>
+							</span>
+							</p>
+										
+								
+							</div>
+						  
+						  
+						  
+						  </div>
+					</li>
+					 
+					
+					<?php if($blog->verifyuser==1)
+					{?>
+					<li style="width:168px; margin:0 auto;padding:20px 0;"><div style=" padding: 30px 35px;"><p class="Verify"><a href="#" class="tooltip">Verified <span>  <strong>This User Is Verified By Admin</strong></a><span> </p></div></li>
+					<?php } else{ ?>
+					<li style="width:150px; margin:0 auto;padding:20px 0;"><div style=" padding: 30px 10px;font-weight:bold;"><p class="NotVerify"><a href="#" class="tooltip">Not Verified <span>  <strong>This User Is Not Verified By Admin</strong></a><span></p> </div></li>
+					<?php } ?>
+						  
+						  
+					<li class="clsNoBorder">
+					<div class="clsGigStatus">
+
+						<div class="clsStatus">
+							<?php if($job->awarded_user == '0' || $job->status == 'open'){ ?>
+							<img src="<?php echo image_url('open_bidding.png');?>" />
+							<?php } if($job->status == 'awarded'){?>
+							<img src="<?php echo image_url('bid_award.png');?>" />
+							<?php } if($job->status == 'closed'){?>
+							<img src="<?php echo image_url('clo.png');?>" />
+							<?php } if($job->status == 'completed'){?>
+							<img src="<?php echo image_url('bid_complete.png');?>" />
+							<?php }?>
+
+							<?php //echo $job->city;?>
+						</div>
+
+						<h3>Job Status</h3> 
+
+					
+						<?php  
+						if(isset($jobMsg) && $jobMsg->num_rows()>0){
+							foreach($jobMsg->result() as $msg){
+								$bidamt=$msg->bid_amount;
+							}
+						}
+					
+					
+						?>
+						<p>Budget : <?php if($job->budget!= '') echo "<span>".'Rs'.$job->budget."</span>"; else echo 'N/A'; ?> </p>
+					</div>
+					
+					<p> Budget : <span class="rupee"><?php if($job->budget!= '') echo "<span>".'Rs'.$job->budget."</span>"; else echo 'N/A'; ?></span></p>
+					
+					<?php 
+					$jobsids= $job->buy_id;
+					$qry= "SELECT COUNT(id) as count, SUM(bid_amount) as sum  FROM bids WHERE job_id=$jobsids";
+					$queryys = $this->db->query($qry,array($job->buy_id));
+					$nbidss = $queryys->result_array();
+					$bid_rec->number = $nbidss[0]['count'];
+
+					$bid_rec->amaounts=$nbidss[0]['sum'];
+					if($bid_rec->number>1){
+						$avgbid=$bid_rec->amaounts/$bid_rec->number;
+					}else{
+						$avgbid=$bid_rec->amaounts;
+					}
+
+
+
+					?>
+					<p>Avg Bid : <span class="rupee">  <?php $avg=$avgbid; if($avg!='') echo $avg; else echo "No Bids"?> </span></p>
+					<p>Bid End Date : <?php  echo $strdt=date("d-m-Y",strtotime($job->end_date));?></p>
+					<p>Project ID : <?php echo $job->buy_id;?></p>
+					<?php 
+						if($loggedInUser){ 
+							$usid=$loggedInUser->id; 
+							$qs= "SELECT * FROM users WHERE id = $usid";
+							$queryys = $this->db->query($qs,array($loggedInUser->id));
+							$bidcredits = $queryys->result_array();
+							//  print_r($bidcredits);exit; 
+							$blog_e->n_credits = $bidcredits[0]['credit'];
+							$blog_e->email=$bidcredits[0]['email'];
+							$blog_e->username=$bidcredits[0]['user_name'];
+							?>
+							<form name="" method="post">
+							<input type="hidden" name="creatorid" value="<?php echo $job->creator_id;?>" id="toidjob" />
+							<input type="hidden" name="jobid" value="<?php echo $job->buy_id;?>" id="jobid"/>
+							<input type="hidden" name="biduserid" value="<?php echo $job->awarded_user;?>" id="biduserjob" />
+							<input type="hidden" name="jobname" value="<?php echo $job->looking_for;?>" id="jobname" />
+							<input type="hidden" name="userid" value="<?php echo $loggedInUser->id;?>" id="biduserid"/>
+							<input type="hidden" name="jobuseremail"  value="<?php  echo $blog->email;?>" id="emails"/>
+							<input type="hidden" name="credit" value="<?php echo $blog_e->n_credits;?>" id="usercredit" />
+							<input type="hidden" name="bideremail" value="<?php echo $blog_e->email;?>" id="bidderemail" />
+							<input type="hidden" name="bidername" value="<?php echo $blog_e->username;?>" id="biddername" />
+
+							<input type="hidden" name="jobbudget" value="<?php echo $job->budget;?>" id="jobamount" />
+
+							</form>
+					<?php } 
+					?>
+					</div>
+				</li>
+				</ul>
+				</div>
+                          
+				<div class="clsTopPosting clearfix">
+                          
+					<div class="clscatgg">
+						<p> <label>Categories </label>:&nbsp;<span style="color:#c00000;"><?php echo $job->category;?></span></p>
+						<p><label> Type</label> :&nbsp;<span style="color:#c00000;"><?php $tpe=$job->requirements; if($tpe==1){ echo "Products";} if($tpe==2){ echo "Services";} if($tpe==3){ echo "Product & Services";}?></span></p>
+						<!--<p><label>Budget </label>: <10, 000</p>-->
+					</div>
+                      	  
+					<div class="clsBidBut">
+						<ul class="clearfix">
+
+						<?php 
+						if($loggedInUser){ 
+							$logusid=$loggedInUser->id;
+							$qrrey= "SELECT COUNT(user_id) as count FROM bids WHERE user_id=$logusid";
+							$qwr = $this->db->query($qrrey,array($loggedInUser->id));
+							$placebid = $qwr->result_array();
+							$record->bidrec = $placebid[0]['count'];
+							
+							
+							if($loggedInUser->id!=$job->creator_id &&  $job->status == 'open' && $record->bidrec!=100){
+								?><p><a href="#" class="popup-bid place"><input type="button" class="clsBut" value="Bid" /></a><?php 
+							} 
+						} 
+						if(!$loggedInUser){ ?>
+							<p style="	text-align:center;clear:both;padding:10px 0;"><a href="#" class="nopopup-bid place" >
+							<input type="button" class="clsBut" value="Bid" /></a>
+						<?php 
+						}
+						if($loggedInUser){ 
+							if($loggedInUser->id!=$job->creator_id &&  $job->status == 'open')
+							{
+								?><a href="#<?php //echo site_url('messages/viewMessage');?>" style="cursor:pointer" class="msgcls">
+								<input type="button" class="clsBut" value="Message" /></a></p><?php 
+							}
+						} ?>
+						</ul> 
+					</div>
+                </div>
+                                  
+				<div class="post_Description">
+					<p> <label>Description</label> : <span> <?php echo $job->description;?></span></p>
+				</div>
+						  					
+						
+		</div>
+		</div>
+		</div> 
+		
+		<?php if($loggedInUser){?>
+		<div class="clsPostIcons">
+			<div id="selCommentpost">
+			<?php 
+				if(isset($bids)){
+					  
+					foreach($bids->result()as $bids){
+
+					?>
+					<div class="clscmtBlock" >
+						<div class="clspostImg">
+						<?php   if($bids->logo!= ''){?>
+							<img src="<?php echo base_url();?>files/logos/<?php echo $bids->logo;?>" height="100" width="100" />
+						<?php 
+						}
+						if($bids->logo== '')
+							echo '<img src="'.image_url('no-image.jpg').'" width="50" height="50" />';
+
+						?>
+
+						</div>
+					<!-- <div class="clsArrow"></div> --> 
+					<div class="clsCmntDesc">
+
+						<div class="BidDetails">
+							<ul class="clearfix">
+								<li class="clsBidRate">
+									<div class="clsLikePostDet"> 
+
+										<p class="clsAuthornm"><span> <!--<img src="<?php echo image_url();?>map_star.jpg" />--><!--<img alt="10.00/10" src="<?php //echo image_url('rating_'.$job->user_rating.'.png');?><?php echo image_url('5-satr.png');?>"/>-->
+										<?php 
+										$usrid=$bids->user_id;
+										$qrs= "SELECT SUM(rating) AS rating,COUNT(id) as reviews FROM reviews WHERE userid =$usrid";
+										//echo "SELECT COUNT(job_id) AS count FROM bids WHERE job_id = $jobidd";
+										$queryss = $this->db->query($qrs,array($bids->user_id));
+										$ncommentsss = $queryss->result_array();
+										//print_r($query);exit;
+										$blog_e->n_commentts = $ncommentsss[0]['rating'];
+										$blog_e->n_commentse = $ncommentsss[0]['reviews'];
+										$count=$blog_e->n_commentse;
+										if($count>1) {
+										$Totalbid=$blog_e->n_commentts;
+										$ratings=$Totalbid/5;
+										}
+										else{
+										$ratings=$blog_e->n_commentts;
+										}
+
+										?>
+
+										<?php //print_r($bids); exit;?>
+										<!--<img alt="" src="<?php echo image_url();?>/<?php /*if($ratings<1.9)
+										{echo "0yellow.png";} else { echo  $ratings."yellow.png";}*/
+										if(($ratings<0) && ($ratings==0)){ echo "0yellow.png"; } elseif(($ratings>0) && ($ratings<1)) { echo "0_5yellow.png";} elseif(($ratings>1) && ($ratings<2)) {  echo "1_5yellow.png"; } elseif(($ratings>2) && ($ratings<3)) {  echo "2_5yellow.png"; } elseif(($ratings>3) && ($ratings<4)) {  echo "3_5yellow.png"; } elseif(($ratings>4) && ($ratings<5)) {  echo "4_5yellow.png"; } elseif($ratings>5) {  echo "5yellow.png"; } elseif(($ratings==1)){  echo  "1yellow.png"; } elseif(($ratings==2)){  echo  "2yellow.png"; } elseif(($ratings==3)){  echo  "3yellow.png"; } elseif(($ratings==4)){  echo  "4yellow.png"; } elseif(($ratings==5)){  echo  "5yellow.png"; }
+										?>">-->
+
+										<?php  // echo $ratings."fghdfgh";if(($ratings<0) && ($ratings==0)  && ($ratings==NULL)){ echo "0yellow.png"; } ?>
+										<?php if($count>1) {
+										$Totalbid=$blog_e->n_commentts;
+										$ratings=$blog_e->n_commentts/$blog_e->n_commentse;
+										// echo $ratings;
+										?>
+										<img src="<?php echo image_url();?>/<?php if(($ratings>1) || ($ratings<2)) {  echo "1_5yellow.png"; } elseif(($ratings>2) ||($ratings<3)) {  echo "2_5yellow.png"; } elseif(($ratings>3) || ($ratings<4)) {  echo "3_5yellow.png"; } elseif(($ratings>4) || ($ratings<5)) {  echo "4_5yellow.png"; } elseif($ratings>5) {  echo "5yellow.png"; } elseif(($ratings==1)){  echo  "1yellow.png"; } elseif(($ratings==2)){  echo  "2yellow.png"; } elseif(($ratings==3)){  echo  "3yellow.png"; } elseif(($ratings==4)){  echo  "4yellow.png"; } elseif(($ratings==5)){  echo  "5yellow.png"; } ?>" />
+										<?php 
+										}
+										else{
+										$ratings=$ncommentsss[0]['rating'];
+										$blog_e->n_comments =$ncommentsss[0]['rating'];
+										?>
+
+										<img src="<?php echo image_url();?>/<?php if(($blog_e->n_comments<0) || ($blog_e->n_comments==0)  || ($ratings==NULL)){ echo "0yellow.png"; } elseif(($ratings>0) || ($ratings<1)) { echo "0_5yellow.png";}  ?>" />
+										<?php 	
+										}
+										?>
+
+
+
+										<!--<span><?php echo $ratings;?>/5</span>--></span><a href="<?php echo site_url('users/view/'.$bids->user_id);?>"> <?php echo $bids->user_name;?></a></p><?php //print_r($job);exit;?>
+										<p>Location : <?php echo $bids->state;?>, <?php echo $bids->city;?> </p> 
+
+
+										<p class="clsNoBorder">posted on:<span><?php $bidstrdate=$bids->bid_time; echo $strdt=date("d-m-Y",strtotime($bidstrdate));?></span>  </p>
+										<p><span class="review"><a href="<?php echo site_url('users/view/'.$bids->user_id);?>"><?php echo $blog_e->n_commentse;?> Reviews</a></span></p>
+
+										<!--<p> <img alt="10.00/10" src="<?php echo image_url('rating_'.$bids->user_rating.'.png');?>"/></p>-->
+									</div>
+								</li>
+					
+					
+							<?php 
+							$verify=$bids->user_verify;
+							if($verify==1){?>
+								<li style="width:168px; margin:0 auto;padding:20px 0;"><div style=" padding: 10px 35px 10px;"><p class="Verify"><a href="#" class="tooltip">Verified<span>  <strong>This User is verified by Admin</strong></span></a></p></div></li><?php } else{
+							?>
+								<li style="width:150px; margin:0 auto;padding:20px 0;"><div style=" padding: 10px;"><p class="NotVerify"><a href="#" class="tooltip">Not Verified<span>  <strong>This User is not verified by Admin</strong></span></a></p></div></li>
+							<?php } 
+							?>
+					
+							<li><p><?php echo $bids->bid_days.' day,'.$bids->bid_hours.' hour';?></p></li>
+							
+							<li class="clsNoBorder">
+								<div class="BidBox">
+								<?php  $usrid=$bids->user_id;
+								$jbid=$bids->job_id;
+								$awrdeuser= "SELECT COUNT(id) AS jobcount FROM buy_requirement WHERE awarded_user=$usrid && id=$jbid";
+								//echo "SELECT COUNT(job_id) AS count FROM bids WHERE job_id = $jobidd";
+								$userrec= $this->db->query($awrdeuser);
+								$userrec = $userrec->result_array();
+								// print_r($userrec);exit;
+								$blog_e->awarded = $userrec[0]['jobcount'];
+								?>
+								<?php if($blog_e->awarded!=0) {
+								?>
+								<span style="float:right"> <img src="<?php echo image_url();?>/award_icon.png" /></span>
+								<?php }?>
+								<div class="bidDet">
+								<h3>Bid Status</h3>
+								<p><span  class="redrupee"><?php echo $bids->bid_amount;?></span></p>
+								<p>Bid Date :<span>&nbsp;<?php $bidstrdate=$bids->bid_days; echo $strdt=date("d-m-Y",strtotime($bidstrdate));?></span></p>
+								</div>
+							</li>
+
+						</ul>
+						
+						
+						<div class="clsCmtAward clearfix">
+						<?php
+						// print_r($bids);exit;
+						$bidusers=$bids->user_id;
+						if($bidusers!=$loggedInUser->id && $loggedInUser->id==$job->creator_id )
+						{
+						// print_r($bids);
+						?>
+
+						<div class="">
+						<p><a href="#" class="tomsg"><input type="button" class="buttonBlackShad" value="Message" /></a>
+						<?php   if($job->status == 'open')
+						{?>
+						<form method="post" action="<?php echo site_url('job/awardBid');?>">
+						<input type="hidden" name="bidid" value="<?php echo $bids->bidid;?>" id=""/>
+						<input type="hidden" name="jobid" value="<?php echo $job->buy_id;?>" id="bidtblid"/>
+						<input type="hidden" name="bidamnt" value="<?php echo $bids->bid_amount;?>" id="awardamt" />
+						<!-- <img src="<?php echo image_url();?>award_icon.jpg" />-->
+						<input type="submit" name="pickBid" class="buttonBlackShad" value="Award"  onclick="return confirm('Are you sure you want to award?')">
+						</form>
+						<a href="#" class="amtedit"><input type="button" class="buttonBlackShad" value="EditAmount" /></a>
+						<?php } ?>
+
+						</p>
+						</div>
+						<?php } ?>
+						</div>
+					</div>
+
+				</div>
+				
+				
+				<div class="Cmnts">
+					<p><label style="color:#000;"><b>Description </b></label>:&nbsp;&nbsp;<span style="float:right;width:825px;display:block;text-align:left;"> <?php echo $bids->bid_desc;?></span></div>
+					</div>
+					<?php 
+					}
+			   
+			   }else{
+					?>
+						<div class="clsNocmtBlock">
+						<!-- <div class="clspostImg">
+						<img src="<?php echo image_url();?>/map-sampleimg.jpg" />
+						<?php echo '<img src="'.image_url('no-image.jpg').'" width="50" height="50" />'; ?>
+						</div>-->
+						<!-- <div class="clsArrow"></div> -->
+						<!--<div class="clsCmntDesc">-->
+
+						<div class="BidDetails" style="min-height:30px;border-bottom:none!important;">
+						<div class="clsNobidmsg"><p>  No Bids Placed Yet</p></div>
+						<!-- </div>-->
+
+						</div>
+						</div>
+				<?php 
+				} 
+				?>
+			   </div>
+					   
+                       
+		   <?php }
+					   
+					   ?>
+					   
+					   
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>  
+                     
+	</div></div></div></div></div></div></div></div> </div></div>          
+	</div>
+			
+	</div>	
+	</div>	
+
+ <!--END OF POST JOB-->
+
+<?php //$this->load->view('footer'); ?>
+<?php $this->load->view('home_footer'); ?>
+   
+</body>
+</html>

@@ -1,0 +1,302 @@
+/*   
+ajax popup form Version 1.0.1
+Tools URI: http://www.birghtyoursite.com
+Description:  ajaxpopupform  is a jquery based cool , professional popup window which can be used as contact , feedback бн forms on your websites .
+Author: alex wang
+Author URI: http://www.birghtyoursite.com/
+*/
+
+/*body 
+{
+	font-family:Verdana,Tahoma,Arial;
+    background:#c0c0c0;
+	font-size:13px;
+	margin:0px;
+	padding:0px;
+	
+}*/
+li
+{
+ list-style:none;
+} 
+#sellerratingpopform
+{
+ 
+ font-style:normal;
+font-variant:normal;
+font-weight:normal;
+line-height:normal;
+word-spacing:-0.04em;
+}
+.sellerratingpopform
+{
+	 width:350px;
+	 border:1px solid #999;
+	 color:#333;
+	 background:#fff;
+	  
+}
+.sellerratingpopform img
+{
+	border:0px;
+} 
+ 
+.sellerratingpopforminner
+{
+	 padding:10px;
+}
+.sellerratingpopform h2 {
+background:transparent url(images/icon_alerts_tick.png) no-repeat scroll 0 0;
+border-bottom:1px solid #CCCCCC; 
+height:25px;
+margin:0px;
+margin-bottom:10px;
+padding:0px 0 8px 37px;
+text-align:left;
+font-size:1.67em;
+font-weight:normal; 
+font-family:'Georgia','Times New Roman',times,serif; 
+word-spacing:-0.04em;
+}
+.sellerratingpopform h4 ,.sellerratingpopform h5
+{
+	font-size:1em;
+	margin:0px;
+	padding:0px;
+	font-weight:normal;
+	padding-bottom:4px;
+}
+.sellerratingpopforminner fieldset
+{
+	padding:0px;
+	margin:5px;
+	border:0px;
+} 
+ 
+.sellerratingpopforminner label {
+color:#333333;
+display:inline;
+font-size:1em;
+font-weight:normal;
+margin:0;
+}
+.sellerratingpopforminner  .field {
+background-color:#DEE0E1;
+margin-bottom:10px;
+margin-top:3px;
+padding:3px; 
+position:relative;
+}
+.sellerratingpopforminner input, .sellerratingpopforminner textarea {
+width:304px;  
+display:block;
+padding:3px; 
+}
+.sellerratingpopforminner .checkbox input {
+
+margin-right:0.1em;
+vertical-align:bottom;
+}
+.sellerratingpopforminner fieldset.checkbox input, .sellerratingpopforminner #recommend-radios input {
+margin:0 0.2em 0.2em 0;
+vertical-align:middle;
+display:inline;
+width:20px;
+}
+.sellerratingpopforminner #recommend-radios input
+{
+	margin-left:10px;
+}
+.sellerratingpopforminner ul {
+margin-bottom:0.5em;
+overflow:hidden;
+
+
+}
+.sellerratingpopform .buttons {
+background-color:#DEEFF7;
+height:30px;
+position:relative;
+padding-top:10px;
+}
+.star-rating, .star-rating a:hover, .star-rating a:active, .star-rating a:focus, .star-rating .current-rating {
+background:transparent url(../images/rate-star.png) repeat-x scroll left -1000px;
+}
+.star-rating {
+	background-position:left top;
+	height:16px;
+	line-height:16px;
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:0;
+	overflow:hidden;
+	padding:0;
+	position:relative;
+	width:80px;
+}
+
+.star-rating li {
+display:inline;
+background:none;
+}
+ 
+.star-rating a, .star-rating .current-rating {
+border:medium none;
+cursor:pointer;
+display:block;
+height:16px;
+left:0;
+line-height:16px; 
+outline-style:none;
+outline-width:medium;
+overflow:hidden;
+position:absolute;
+text-indent:-1000em;
+top:0;
+}
+.star-rating a:hover, .star-rating li:hover a {
+background-position:left -16px;
+cursor:pointer;
+}
+.star-rating a.star1 {
+width:20%;
+z-index:6;
+}
+.star-rating a.star2 {
+width:40%;
+z-index:5;
+}
+.star-rating a.star3 {
+width:60%;
+z-index:4;
+}
+.star-rating a.star4 {
+width:80%;
+z-index:3;
+}
+.star-rating a.star5 {
+width:100%;
+z-index:2;
+}
+.star-rating .current-rating {
+background-position:left -16px;
+z-index:0;
+}
+.rating-inline h5 {
+border:medium none;
+float:left;
+padding-top:0;
+width:45%;
+margin:0px;
+padding:0px;
+}
+.rating-inline ul.star-rating li {
+margin:0;
+}
+.rating-inline {
+border-bottom:1px solid #CCCCCC;
+margin-bottom:6px;
+overflow:hidden;
+width:100%;
+}
+.rating-inline ul.star-rating {
+float:right;
+}
+.rating-module .last {
+border-bottom:1px solid #CCCCCC;
+margin-bottom:10px;
+} 
+
+.sellerratingpopform .button {
+padding-right:0;
+}
+ 
+.sellerratingpopform .button {
+float:left;
+margin-right:2em;
+}
+ 
+a.button {
+display:inline;
+float:left;
+font-size:11px;
+line-height:11px;
+overflow:hidden;
+padding-left:18px;
+}
+ 
+ 
+ 
+a.button, a.button span.inner {
+ 
+background:transparent url(images/all-buttons-sprite.png) no-repeat scroll left top;
+}
+ 
+a.default, a.button {
+color:#333333;
+font-weight:bold;
+}
+
+ .submit-button {
+left:15px;
+}
+ 
+.submit-button {
+float:left;
+position:relative;
+z-index:1;
+}
+
+a.button span.inner, a.active span.inner {
+background-position:right -44px;
+cursor:pointer;
+display:block;
+float:left;
+height:11px;
+padding:6px 8px 5px 0;
+position:relative;
+white-space:nowrap;
+width:auto;
+}
+ 
+ .buttons a.cancel {
+position:absolute;
+right:0;
+}
+a.cancel  {
+background-position:left -106px;
+padding-left:21px;
+}
+a.cancel span.inner  {
+background-position:right -66px;
+padding:4px 8px 5px 0;
+}
+#ajaxformbtn
+{
+	 position:fixed;
+	 bottom:0px;
+	 right:0px;
+	 cursor:pointer;
+} 
+a img
+{
+	border:0px;
+}
+#sellerratingpopform-success div.inner
+{
+	padding:10px;
+}
+fieldset.pof-error {
+/*background-color:#FFE5E6;
+margin-left:-5px;
+margin-right:-5px;
+padding:5px;*/
+}
+.errormsg
+{
+	display:block;
+	color:Red;
+	margin:2px 0px;
+}
+ 

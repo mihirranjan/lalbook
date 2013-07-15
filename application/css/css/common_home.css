@@ -1,0 +1,365 @@
+body {
+	font-family: Tahoma;
+	font-size: 13px; /*-- Enables font size scaling in MSIE  --*/
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	color: #000;
+	background: url(../images/h_bg.jpg) repeat-x;
+	line-height: normal;
+}
+
+html>body {
+	font-size: 9.5pt;
+}
+
+html {
+	min-height: 100%;
+	height: auto;
+}
+
+#top { /*-- Nomensa Method to hide the content --*/
+	position: absolute;
+	left: -999em;
+	width: 990em;
+}
+
+form,table,p,h1,h2,h3,h4,h5,h6,ul,li,div,dl {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+	color: #000;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+img {
+	border: 0;
+	vertical-align: top;
+}
+
+input,select {
+	vertical-align: middle;
+}
+
+.clsFloatLeft {
+	float: left;
+}
+
+.clsFloatRight {
+	float: right;
+}
+/* end of common */
+/* clearfix */
+.clearfix:after { /*content: ".";
+	display: block;*/
+	height: 0;
+	/*clear: both;*/
+	visibility: hidden;
+}
+
+.clearfix {
+	display: inline-table;
+}
+/* Hides from IE-mac \*/
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix { /*display: block;*/
+	
+}
+
+/* End hide from IE-mac */
+/* end of  clearfix */
+
+/* container */
+/* Wrapper */
+.Container {
+	width: 1000px;
+	margin: 0 auto;
+	text-align: left;
+}
+/* header */
+#header {
+	padding: 0;
+	clear: both;
+	overflow: hidden;
+}
+
+#selLeftHeader {
+	width: 125px;
+	padding: 10px 0;
+}
+
+#selLogo h1 {
+	background: url(../images/logo.jpg) no-repeat;
+}
+
+#selLogo h1 a {
+	display: block;
+	height: 39px;
+	overflow: hidden;
+	text-indent: -2000em;
+	width: 125px;
+}
+
+#selRightHeader {
+	width: auto;
+	margin: 7px 0 0 222px;
+}
+
+.clsMenu li {
+	background: url(../images/menu_sep.jpg) no-repeat right center;
+	float: left;
+}
+
+.clsMenu li a:hover,.clsMenu li.clsActive a {
+	color: #b32323;
+	text-align: center;
+	width: auto;
+	height: 45px;
+	display: block;
+	line-height: 45px !important;
+}
+
+.clsMenu li a {
+	color: #595959;
+	text-align: center;
+	width: auto;
+	display: block;
+	margin: 0 10px;
+	padding: 0 10px;
+	font: 13px Tahoma;
+	line-height: 45px !important;
+	text-transform: uppercase;
+}
+
+.clsMenu li.clsNoBorder {
+	background: none;
+}
+
+.clsBut {
+	background: url(../images/but.jpg) repeat-x;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+	color: #fff !important;
+	float: left;
+	display: block;
+	border: none;
+	padding: 0 10px;
+}
+
+#selSearch {
+	background: none repeat scroll 0 0 #F7F7F7;
+	border: 1px solid #E5E5E5;
+	border-radius: 3px 3px 3px 3px;
+	height: 56px;
+	line-height: 56px;
+	margin: 20px 0;
+}
+
+#selSearch label {
+	background: url("../images/label_bg.jpg") repeat-x scroll 0 0
+		transparent;
+	border-right: 1px solid #E5E5E5;
+	color: #333333;
+	display: block;
+	float: left;
+	height: 56px;
+	line-height: 56px;
+	margin: 0 10px 0 0;
+	text-align: center;
+	width: 120px;
+}
+
+.clsSertxt {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 1px solid #E5E5E5;
+	color: #565656;
+	height: 33px;
+	line-height: 33px;
+	margin: 10px 0;
+	padding-left: 5px;
+	width: 800px;
+}
+
+.clsGobut {
+	background: url("../images/search_icon.jpg") no-repeat scroll 0 0
+		transparent;
+	border: medium none;
+	color: #FFFFFF;
+	cursor: pointer;
+	height: 38px;
+	line-height: 38px;
+	margin: 0 8px;
+	text-align: center;
+	text-transform: uppercase;
+	width: 38px;
+}
+
+.clsMainContent {
+	padding: 10px 0;
+}
+
+#main {
+	float: left;
+	width: 700px;
+}
+
+.sidebar {
+	width: 290px;
+	float: right;
+}
+
+.sidebar h3 {
+	font: bold 16px Arial, Helvetica, sans-serif;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+}
+
+.clsAdver p {
+	margin: 0 0 10px;
+}
+
+.clsAdver p.clsAlign {
+	text-align: right;
+	margin: 0 0 0 10px;
+}
+
+.clsAdver p a {
+	color: #ad1d1d;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.clsLogin { /*border:1px solid #f5f5f5;
+	box-shadow:0 1px 2px #f4f4f4;
+	margin-bottom:10px;
+	padding:10px;
+	border-radius:5px;*/
+	background: #fff;
+	background: -moz-linear-gradient(top, white 0, #f4f4f4 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white),
+		color-stop(100%, #f4f4f4) );
+	background: -webkit-linear-gradient(top, white 0, #f4f4f4 100%);
+	background: -o-linear-gradient(top, white 0, #f4f4f4 100%);
+	background: -ms-linear-gradient(top, white 0, #f4f4f4 100%);
+	background: linear-gradient(to bottom, #fff 0, #f4f4f4 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',
+		endColorstr='#f4f4f4', GradientType=0 );
+	border: 1px solid #d1d1d1;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 8px 8px;
+	text-align: left;
+	margin-top: 10px;
+	font-size: 12px;
+	font-weight: 300;
+	color: #525252;
+}
+
+.clsLogin p {
+	margin: 15px 0;
+	color: #333;
+}
+
+.clsLogin p {
+	margin: 15px 0;
+	color: #AAAAAA;
+}
+
+.clsLogintxt { /*background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #EBEBEB;
+    color: #AAAAAA; */
+	border: 1px solid #E7E7E7;
+	font: 12px/30px Arial, Helvetica, sans-serif;
+	height: 30px;
+	padding: 0 5px;
+	width: 255px;
+	background: white;
+	padding: 7px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	vertical-align: middle;
+}
+
+.clsCommonbut {
+	background: url(../images/serach_but.jpg) repeat-x;
+	border: 1px solid #e5e5e5;
+	height: 33px;
+	line-height: 33px;
+	color: #fff;
+}
+
+#selFooter {
+	background: url(../images/foot_bg.jpg) repeat-x;
+	height: 49px;
+}
+
+.clsFooter {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.clsLeftfoot {
+	float: left;
+	width: 480px;
+}
+
+.clsLeftfoot li {
+	float: left;
+	background: url(../images/f_sep.jpg) no-repeat right;
+	margin-right: 15px;
+}
+
+.clsLeftfoot li a {
+	color: #717171;
+	line-height: 49px;
+	padding-right: 15px;
+}
+
+.clsLeftfoot li.clsNoBorder {
+	background: none;
+}
+
+.clsRightFoot {
+	float: right;
+	margin: 0 0 0 10px;
+}
+
+.clsRightFoot p {
+	line-height: 49px;
+	color: #717171
+}
+
+.clsCenterFoot {
+	float: left;
+	width: 100px;
+}
+
+.clsCenterFoot li {
+	float: left;
+	margin: 12px 5px 0 0;
+}
+
+.clsCenterFoot li a {
+	height: 49px;
+	line-height: 49px;
+}

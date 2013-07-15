@@ -1,0 +1,30 @@
+<?php
+$lang['Job Message Board']	            	= 'Job Message Board';
+$lang['Job']								= 'Job Name';
+$lang['To']							        = 'To';
+$lang['You can select multiple jobs by holding down the CTRL key'] = 'You can select multiple jobs by holding down the CTRL key.';
+$lang['Your name and address']					= 'Your name and address.';
+$lang['Message for Everyone']					= 'Public Message';
+$lang['Invoice Report']					        = 'Invoice Report';
+$lang['Invoice No']					            = 'Invoice No';
+$lang['Optional']					            = '[Optional]';
+$lang['Company']					            = 'Company';
+$lang['Maventricks']					        = 'Maventricks Technologies';
+$lang['Address']					            = 'Address';
+$lang['date']					                = 'Date - ';
+$lang['Company Address']					    = 'Madurai';
+$lang['No']					                    = 'No';
+$lang['description']					        = 'Description';
+$lang['amount']					                = 'Amount';
+$lang['Total']					                = 'Total';
+$lang['You do not have any jobs posted yet']  = 'You do not have any jobs posted yet.';
+$lang['There is no payment is closed to view Invoice']  = 'There is no payment is closed to view Invoice.';
+$lang['S No.'] 	= 'S No.';				
+$lang['Job Name'] 	= 'Job Name';
+$lang['Posted By'] 	= 'Posted By';
+$lang['Total Bid Amount'] 	= 'Total Bid Amount';
+$lang['Bid Won By'] 	= 'Bid Won By';
+$lang['Bid Created'] 	= 'Bid Created';
+$lang['Amount Remaining'] 	= 'Amount Remaining';
+$lang['Invoice'] 	= 'Invoice';
+?>

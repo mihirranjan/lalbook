@@ -1,0 +1,618 @@
+/*/* CSS Document */
+
+/*MENUS*/
+
+.navmenutabs{
+
+	height:31px;
+
+}
+
+* html .navmenutabs{
+
+	overflow: hidden;
+
+	}
+
+.navmenutabs ul{
+
+	list-style-type: none;
+
+	margin: 0;
+
+	margin-left: 1em; /*offset of first tab relative to page left edge*/
+
+	padding: 0;
+
+}
+
+.navmenutabs li{
+
+	float: left;
+
+	margin: 0;
+
+	padding: 0;
+
+}
+
+
+
+.navmenutabs a{
+
+	float: left;
+
+	position: relative;
+
+	top: 5px; /* 1) Number of pixels to protrude up for selected tab. Should equal (3) MINUS (2) below */
+
+	background:url(../images/t_left.jpg) no-repeat left top;
+
+	margin: 0;
+
+	margin-right: 3px; /*Spacing between each tab*/
+
+	padding: 0 0 0 5px;
+
+	text-decoration: none;
+
+	border-bottom:1px solid #7AB5DF;
+
+	line-height:18px;
+
+}
+
+
+
+.navmenutabs a span{
+
+	float: left;
+
+	position: relative;
+
+	display: block;
+
+	background:url(../images/t_right.jpg) no-repeat right top;
+
+	padding: 5px 14px 3px 3px; /* 2) Padding within each tab. The 3rd value, or 3px, should equal (1) MINUS (3) */
+
+	color: white;
+
+}
+
+
+
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+
+.navmenutabs a span {float:none;}
+
+/* End IE5-Mac hack */
+
+.navmenutabs .selected a{
+
+	background:url(../images/t_left.jpg) no-repeat 0 0;
+
+	top: 2px;
+
+	border-bottom:1px solid #EFF8FF;
+
+}
+
+
+
+.navmenutabs .selected a span{
+
+	background:url(../images/t_right.jpg) no-repeat right 0;
+
+	color: black;
+
+	padding-bottom: 8px; /* 3) Bottom padding of selected tab. Should equal (1) PLUS (2) above */
+
+	top: 0;
+
+}
+
+
+
+.navmenutabs a:hover{
+
+	background:url(../images/b_left.jpg) no-repeat 0 0;
+
+	top: 2px;
+
+	border-bottom:1px solid #EFF8FF;
+
+	color:#000000;
+
+}
+
+
+
+
+
+.navmenutabs a:hover span{
+
+	background:url(../images/b_right.jpg) no-repeat right 0;
+
+	padding-bottom: 8px; /* 3) Bottom padding of selected tab. Should equal (1) PLUS (2) above */
+
+	top: 0;
+
+	color:#000000;
+
+}
+
+
+
+/*GRAY TABS*/
+
+.slidetabsmenu{
+
+	height:31px;
+
+	}
+
+* html .slidetabsmenu{
+
+	overflow: hidden;
+
+	}
+
+.slidetabsmenu ul{
+
+	list-style-type: none;
+
+	margin: 0;
+
+	/*margin-left: 1em; *//*offset of first tab relative to page left edge*/
+
+	padding: 0 !important;
+
+	overflow:visible!important;
+
+}
+
+
+
+.slidetabsmenu li{
+
+	float: left;
+
+	margin: 0;
+
+	padding: 0;
+
+}
+
+
+
+.slidetabsmenu a{
+	background:transparent url(../images/t_left.jpg) no-repeat scroll left top;
+	/* border-bottom:1px solid #BFBFBF;*/
+	float:left;
+	line-height:18px;
+	margin:0 0.1em 0 0;
+	padding:0 0 0 4px;
+	position:relative;
+	text-decoration:none;
+	top:5px;
+	border-bottom:none!important;
+}
+
+.slidetabsmenu a span{
+	background:transparent url(../images/t_right.jpg) no-repeat scroll right top;
+	color:#FFFFFF;
+	display:block;
+
+	float:left;
+
+	padding:5px 7px 3px 3px;
+
+	position:relative;
+
+	text-align:center;
+
+border-bottom:none!important;
+}
+
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+
+.slidetabsmenu a span {float:none;border-bottom:none!important;}
+
+/* End IE5-Mac hack */
+
+.slidetabsmenu .selected a{
+
+	background:url(../images/b_left.jpg) no-repeat 0 0;
+
+	top: 5px;
+border-bottom:none!important;
+	/*border-bottom:1px solid #FDFDFD;*/
+
+}
+
+
+
+.slidetabsmenu .selected a span{
+
+	background:url(../images/b_right.jpg) no-repeat right 0;
+
+	color: black;
+
+	padding:5px 7px 3px 3px; /* 3) Bottom padding of selected tab. Should equal (1) PLUS (2) above */
+
+	top: 0;
+border-bottom:none!important;
+}	
+
+
+
+.slidetabsmenu a:hover{
+
+	background:url(../images/b_left.jpg) no-repeat 0 0;
+
+	top: 2px;
+
+	/* border-bottom:1px solid #FDFDFD; */
+
+	color:#000000;
+
+}
+
+
+
+.slidetabsmenu a:hover span{
+
+	background:url(../images/b_right.jpg) no-repeat right 0;
+
+	padding-bottom: 8px; /* 3) Bottom padding of selected tab. Should equal (1) PLUS (2) above */
+
+	top: 0;
+
+	color:#000000; 
+	text-decoration:none!important; 
+
+}
+
+.menu_fix {
+
+	height:auto !important;
+
+	}
+
+.menu_fix ul {	
+
+	overflow:hidden !important;
+
+	position:relative;
+
+	z-index:10;
+
+	padding:0 0 4px 0!important;
+	
+	margin:0 !important;
+
+	}
+
+.menu_fix li {
+
+	height:27px;
+
+	}
+
+.menu_fix .selected a span{
+
+	color:black;
+
+	font-weight:bold;
+border-bottom:none!important;
+	}
+
+/*Mar23 2012*/
+
+
+.slidetabsmenu a#tab2{
+	background:transparent url(../images/gt_left.png) no-repeat scroll left top;
+	/* border-bottom:1px solid #BFBFBF;*/
+	float:left;
+	line-height:18px;
+	margin:0 0.1em 0 0;
+	padding:0 0 0 4px;
+	position:relative;
+	text-decoration:none;
+	top:5px;
+}
+.slidetabsmenu a#tab2 span{
+	background:transparent url(../images/gt_right.png) no-repeat scroll right top;
+	color:#FFFFFF;
+	display:block;
+	float:left;
+	padding:5px 7px 3px 3px;
+	position:relative;
+	text-align:center;
+}
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+
+.slidetabsmenu a#tab2 span {float:none;}
+
+/* End IE5-Mac hack */
+.slidetabsmenu .selected2 a#tab2,.slidetabsmenu .selected5 a#tab2{
+	background:url(../images/grb_left.png) no-repeat 0 0;
+	top: 2px;
+	/*border-bottom:1px solid #FDFDFD;*/
+}
+.slidetabsmenu .selected2 a#tab2 span,.slidetabsmenu .selected5 a#tab2 span{
+	background:url(../images/grb_right.png) no-repeat right 0;
+	color: black;
+	padding-bottom:8px;
+	/*padding:5px 7px 3px 3px; 
+	top: 0;*/
+}	
+.slidetabsmenu a#tab2:hover{
+	background:url(../images/grb_left.png) no-repeat 0 0;
+	top: 2px;
+	/* border-bottom:1px solid #FDFDFD; */
+	color:#000000;
+}
+.slidetabsmenu a#tab2:hover span{
+	background:url(../images/grb_right.png) no-repeat right 0;
+	padding-bottom: 8px; /* 3) Bottom padding of selected tab. Should equal (1) PLUS (2) above */
+	top: 0;
+	color:#000000; 
+	text-decoration:none!important;  
+}
+
+
+/* Red Tab */
+
+.slidetabsmenu a#tab3{
+	background:transparent url(../images/rt_left.png) no-repeat scroll left top;
+	/* border-bottom:1px solid #BFBFBF;*/
+	float:left;
+	line-height:18px;
+	margin:0 0.1em 0 0;
+	padding:0 0 0 4px;
+	position:relative;
+	text-decoration:none;
+	top:5px;
+}
+.slidetabsmenu a#tab3 span{
+	background:transparent url(../images/rt_right.png) no-repeat scroll right top;
+	color:#FFFFFF;
+	display:block;
+	float:left;
+	padding:5px 7px 3px 3px;
+	position:relative;
+	text-align:center;
+}
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+
+.slidetabsmenu a#tab2 span {float:none;}
+
+/* End IE5-Mac hack */
+.slidetabsmenu .selected4 a#tab3{
+	background:url(../images/rb_left.png) no-repeat 0 0;
+	top: 2px;
+	/*border-bottom:1px solid #FDFDFD;*/
+}
+.slidetabsmenu .selected4 a#tab3 span{
+	background:url(../images/rb_right.png) no-repeat right 0;
+	color: black;
+	padding-bottom:8px;
+	/*padding:5px 7px 3px 3px; 
+	top: 0;*/
+}	
+.slidetabsmenu a#tab3:hover{
+	background:url(../images/rb_left.png) no-repeat 0 0;
+	top: 2px;
+	/* border-bottom:1px solid #FDFDFD; */
+	color:#000000;
+}
+.slidetabsmenu a#tab3:hover span{
+	background:url(../images/rb_right.png) no-repeat right 0;
+	padding-bottom: 8px; /* 3) Bottom padding of selected tab. Should equal (1) PLUS (2) above */
+	top: 0;
+	color:#000000; 
+	text-decoration:none!important;  
+}
+
+
+/* Yellow Tab */
+
+.slidetabsmenu a#tab4{
+	background:transparent url(../images/yt_left.png) no-repeat scroll left top;
+	/* border-bottom:1px solid #BFBFBF;*/
+	float:left;
+	line-height:18px;
+	margin:0 0.1em 0 0;
+	padding:0 0 0 4px;
+	position:relative;
+	text-decoration:none;
+	top:5px;
+}
+.slidetabsmenu a#tab4 span{
+	background:transparent url(../images/yt_right.png) no-repeat scroll right top;
+	color:#FFFFFF;
+	display:block;
+	float:left;
+	padding:5px 7px 3px 3px;
+	position:relative;
+	text-align:center;
+}
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+
+.slidetabsmenu a#tab4 span {float:none;}
+
+/* End IE5-Mac hack */
+.slidetabsmenu .selected3 a#tab4{
+	background:url(../images/yb_left.png) no-repeat 0 0;
+	top: 2px;
+	/*border-bottom:1px solid #FDFDFD;*/
+}
+.slidetabsmenu .selected3 a#tab4 span{
+	background:url(../images/yb_right.png) no-repeat right 0;
+	color: black;
+	padding-bottom:8px;
+	/*padding:5px 7px 3px 3px;
+	top: 0;*/
+}	
+.slidetabsmenu a#tab4:hover{
+	background:url(../images/yb_left.png) no-repeat 0 0;
+	top: 2px;
+	/* border-bottom:1px solid #FDFDFD; */
+	color:#000000;
+}
+.slidetabsmenu a#tab4:hover span{
+	background:url(../images/yb_right.png) no-repeat right 0;
+	padding-bottom: 8px; /* 3) Bottom padding of selected tab. Should equal (1) PLUS (2) above */
+	top: 0;
+	color:#000000; 
+	text-decoration:none!important;  
+}
+
+/* Yellow Tab */
+
+
+/* Yellow Tab */
+
+.slidetabsmenu a#tab5{
+	background:transparent url(../images/lt_left.png) no-repeat scroll left top;
+	/* border-bottom:1px solid #BFBFBF;*/
+	float:left;
+	line-height:18px;
+	margin:0 0.1em 0 0;
+	padding:0 0 0 4px;
+	position:relative;
+	text-decoration:none;
+	top:5px;
+}
+.slidetabsmenu a#tab5 span{
+	background:transparent url(../images/lt_right.png) no-repeat scroll right top;
+	color:#FFFFFF;
+	display:block;
+	float:left;
+	padding:5px 7px 3px 3px;
+	position:relative;
+	text-align:center;
+}
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+
+.slidetabsmenu a#tab5 span {float:none;}
+
+/* End IE5-Mac hack */
+.slidetabsmenu .selected6 a#tab5{
+	background:url(../images/lb_left.png) no-repeat 0 0;
+	top: 2px;
+	/*border-bottom:1px solid #FDFDFD;*/
+}
+.slidetabsmenu .selected6 a#tab5 span{
+	background:url(../images/lb_right.png) no-repeat right 0;
+	color: black;
+	padding-bottom:8px;
+	/*padding:5px 7px 3px 3px; 
+	top: 0;*/
+}	
+.slidetabsmenu a#tab5:hover{
+	background:url(../images/lb_left.png) no-repeat 0 0;
+	top: 2px;
+	/* border-bottom:1px solid #FDFDFD; */
+	color:#000000;
+}
+.slidetabsmenu a#tab5:hover span{
+	background:url(../images/lb_right.png) no-repeat right 0;
+	padding-bottom: 8px; /* 3) Bottom padding of selected tab. Should equal (1) PLUS (2) above */
+	top: 0;
+	color:#000000; 
+	text-decoration:none!important;  
+}
+
+/* lightgreen Tab */
+
+
+.slidetabsmenu a#tab1{
+	background:transparent url(../images/t_left.jpg) no-repeat scroll left top;
+	/* border-bottom:1px solid #BFBFBF;*/
+	float:left;
+	line-height:18px;
+	margin:0 0.1em 0 0;
+	padding:0 0 0 4px;
+	position:relative;
+	text-decoration:none;
+	top:5px;
+}
+
+.slidetabsmenu a#tab1 span{
+	background:transparent url(../images/t_right.jpg) no-repeat scroll right top;
+	color:#FFFFFF;
+	display:block;
+
+	float:left;
+
+	padding:5px 7px 3px 3px;
+
+	position:relative;
+
+	text-align:center;
+
+}
+
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+
+.slidetabsmenu a#tab1 span {float:none;}
+
+/* End IE5-Mac hack */
+
+.slidetabsmenu .selected1 a#tab1{
+
+	background:url(../images/b_left.jpg) no-repeat 0 0;
+
+	top: 2px;
+
+	/*border-bottom:1px solid #FDFDFD;*/
+
+}
+
+
+
+.slidetabsmenu .selected1 a#tab1 span{
+
+	background:url(../images/b_right.jpg) no-repeat right 0;
+
+	color: black;
+	padding-bottom:8px;
+
+	/*padding:5px 7px 3px 3px; /* 
+
+	top: 0;*/
+
+}	
+
+
+
+.slidetabsmenu a#tab1:hover{
+
+	background:url(../images/b_left.jpg) no-repeat 0 0;
+
+	top: 2px;
+
+	/* border-bottom:1px solid #FDFDFD; */
+
+	color:#000000;
+
+}
+
+
+
+.slidetabsmenu a#tab1:hover span{
+
+	background:url(../images/b_right.jpg) no-repeat right 0;
+
+	padding-bottom: 8px; /* 3) Bottom padding of selected tab. Should equal (1) PLUS (2) above */
+
+	top: 0;
+
+	color:#000000; 
+	text-decoration:none!important; 
+
+}
+
