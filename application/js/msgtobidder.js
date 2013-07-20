@@ -9,12 +9,10 @@ Author URI: http://www.birghtyoursite.com/
 
 
 
-    $(document).ready(function(){ 
+ $(document).ready(function(){ 
     
     
-    $(window).resize(function(){
-        $('#tobiddmsgform').center();
-    }); 
+   
     $('.tobiddmsgform .canceldd span').click(function(){
         $('#tobiddmsgform').fadeOut(500);
     });
@@ -22,8 +20,10 @@ Author URI: http://www.birghtyoursite.com/
       $('#tobiddmsgform').submit();
     });
     $('.tomsg').click(function(){
+		 var p = $('.tomsg').position();
+		
         $('.tobiddmsgform').stop();
-        $('.tobiddmsgform').fadeIn(500);
+        $('.tobiddmsgform').css("top",(p.top-200)).css("left", (p.left+200)).fadeIn(500);
         $(this).blur();
     });
     $(".star-rating li a").click(function()
@@ -55,22 +55,24 @@ Author URI: http://www.birghtyoursite.com/
     );
     
     $("#tobiddmsgform").submit(function(){
-								
+		$(".ajax_loader").show();						
 		dataString = $("#tobiddmsgform").serialize();  
 		$.ajax({
 		type: "POST",
-		url: "http://demo.maventricks.com/lalbook/application/views/tomsg.php",
+		url: webroot+"index.php/job/tomsg",
+		//url: "http://demo.maventricks.com/lalbook/application/views/tomsg.php",
 		data: dataString,
 		dataType: "json",
 		success: function(data) {  
 			if(data.success){ 
+				$(".ajax_loader").hide();
 				$(".tomsgformwrapper").css('display','none'); 
 				$("#tomsgform-success").fadeIn(500); 
 				window.location.reload();
 			}  
 			else
 			{
-				
+				$(".ajax_loader").hide();
 			  $('.tomsgformwrapper  .pof-error').removeClass('pof-error');
 			  $('.tomsgformwrapper  .errormsg').remove();
 			  for(var i=0 ; i < data.errors.length ; i++ )

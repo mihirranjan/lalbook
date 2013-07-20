@@ -21,7 +21,7 @@
 	left: 46%;
     position: absolute;
     top: 40%;
-    z-index: 999999;
+    z-index: 9999999999;
 	display:none;
 }
 
@@ -422,45 +422,7 @@ margin-right:20px;
 	border:none;
 	padding:10px 10px 0;
 }
-#tabs ul li {
-    margin: 0 4px 0 0 !important;
-}
-#tabs ul li.active, #tabs ul li:hover, #tabs ul li {
-    background: none repeat scroll 0 0 transparent;
-}
-#tabs ul li, #tabs ul li.active, #tabs ul li:hover {
-    width: auto;
-}
-#tabs ul li {
-    background: url("images/s_li.png") no-repeat scroll 0 0 transparent;
-    border: medium none;
-    float: left;
-    height: 33px;
-    text-align: center;
-    width: 123px;
-}
-#tabs #selCommentpost ul li{
-	width:22% !important;
-}
-#tabs #selCommentpost .BidDetails li.clsNoBorder {
-    border: none !important;
-}
 
-#tabs #selCommentpost .BidDetails li .buttonPostBid{
-	margin: 0 0 0 50px !important;
-}
-#tabs li span.clsCount {
-    background: url("images/cmnt_bg.png") no-repeat scroll left 0 transparent;
-    color: #FFFFFF;
-    display: block;
-    height: 22px;
-    left: 100px;
-    line-height: 22px;
-    position: relative;
-    right: 0;
-    top: -45px;
-    width: 26px;
-}
 .dt0 {
     border-left: 1px solid #FDFDFD !important;
 }
@@ -493,3 +455,39 @@ margin-right:20px;
 	height:30px;
 	cursor:pointer;
 }
+.edit_option{
+	color: #787800;
+    font-size: 11px;
+    left: 145px;
+    position: absolute;
+    top: 14px;
+	cursor:pointer;
+}
+.edit_option a{
+	color:#B32323;
+	text-decoration:underline;
+}
+.view_details{
+	position:relative;
+}
+.pr_edit{
+	position:relative;
+}
+
+.separator{
+	border-bottom:1px solid #EEEEEE;
+	padding:2px;
+}
+
+.view_details span{
+	color: #333333;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: justify;
+	width:300px;
+	float:right;
+	width:595px;
+}
+
+

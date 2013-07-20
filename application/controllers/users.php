@@ -910,20 +910,20 @@ class Users extends CI_Controller {
 			 echo json_encode($return_arr);
 			 return;
 		 }
-		 if(isset($_POST['email']))
-		 {
-		 $uemailid=$_POST['email'];
-		 $useremailid=mysql_query("select email from users where email='$uemailid'");
-		 $rest=mysql_num_rows($useremailid);
-		 if($rest>0)
-		 {
-		 // echo "{'errors': [{'field': 'email', 'error': 'Enter a valid e-mail address.'}], 'success': false}";
-			 $return_arr["errors"]=array(array('field'=>'email','error'=>'Sorry Your Email Is Already Registered in Lalbook.'));
-			 $return_arr["success"]= false;
-			 echo json_encode($return_arr);
-			 return;
-		 
-		 }
+		 if(isset($_POST['email'])){
+			$uemailid=$_POST['email'];
+
+			$check_user_exist = "select count(*) as count_row from users where email='$uemailid'";
+			$check_exist_array = $this->db->query($check_user_exist);
+
+			$check_exist  = $check_exist_array->result();
+
+			if($check_exist[0]->count_row){
+				$return_arr["errors"]=array(array('field'=>'email','error'=>'Sorry Your Email Is Already Registered in Lalbook.'));
+				 $return_arr["success"]= false;
+				 echo json_encode($return_arr);
+				 return;
+			}
 		 }
 		 if( !isset($_POST['username']) || trim($_POST['username'])=="")
 		{ 
@@ -1028,7 +1028,8 @@ class Users extends CI_Controller {
 
 		if(($fulnm!='') && ($usremail!='') && ($usrnm!='') && ($msg!='') && ($rate3!='') && ($confmp!='') && ($trmcond!='')){
 		 
-			$usersign="insert into users(user_name,fulname,email,role_id,password,activation_key,created,lalbook_goal) values('$usrnm','$fulnm','$usremail','1','$haspwd','$activation_key','$created','$msg')";
+			$usersign="insert into users(user_name,fulname,email,role_id,password,activation_key,created,lalbook_goal) 
+					values('$usrnm','$fulnm','$usremail','1','$haspwd','$activation_key','$created','".mysql_escape_string($msg)."')";
 			$query1 = $this->db->query($usersign);
 			
 			if($query1){
@@ -1080,6 +1081,72 @@ class Users extends CI_Controller {
 			
 		 }
 	} 
+	
+	// Upload user image - mihir (july 19) 
+	function ajaxupload(){
+		if(isset($_POST['submitproduct']) and $_SERVER['REQUEST_METHOD'] == "POST"){
+			$path = 'uploads/'; //set your folder path
+			//$path = $_SERVER['DOCUMENT_ROOT'] . "/uploads/";
+			if(!isset($_FILES['photoimg'])){
+				echo "<p style='color:red;'>Please upload a image for your product<p>";
+				return;
+			}
+			$filename = $_FILES['photoimg']['tmp_name']; //get the temporary uploaded image name
+			$valid_formats = array( "jpg","png", "gif", "bmp", "GIF","JPG","PNG"); //add the formats you want to upload
+			$prprice=$_POST['price'];
+			$userid=$_POST['user'];
+			$description=$_POST['desc'];
+			$producname=$_POST['prname'];
+			$name = $_FILES['photoimg']['name']; //get the name of the image
+			$size = $_FILES['photoimg']['size']; //get the size of the image
+		
+		if(($name!='') && ($prprice!='')){
+			if(strlen($name)) //check if the file is selected or cancelled after pressing the browse button. 
+			{
+				list($txt, $ext) = explode(".", $name); //extract the name and extension of the image
+				if(in_array($ext,$valid_formats)) //if the file is valid go on.
+				{
+					if($size < 2098888) // check if the file size is more than 2 mb
+					{
+						$actual_image_name =  str_replace(" ", "_", $txt)."_".time().".".$ext; //actual image name going to store in your folder
+						$tmp = $_FILES['photoimg']['tmp_name']; 
+						if(move_uploaded_file($tmp, $path.$actual_image_name) && is_numeric($_POST['price'])) //check the path if it is fine
+						{
+
+							move_uploaded_file($tmp, $path.$actual_image_name); //move the file to the folder
+							$pinsert="insert into gallery(price,description,gal_image,creator_id,productname) values('$prprice','".mysql_escape_string($description)."','$actual_image_name','$userid','".mysql_escape_string($producname)."')";
+							$query = $this->db->query($pinsert);
+							if(!$query){
+								echo "<p style='color:red;'>There is a database eroor</p>"; 
+							}else{
+								//echo "<p>Your Product Is Added</p>";
+							}
+							echo "<img src='".base_url()."uploads/".$actual_image_name."'  class='preview'> <input type='hidden' name='actual_image_name' id='actual_image_name' value='$actual_image_name' />";
+
+						}else{
+							echo "<p style='color:red;'>Failed.Please enter a valide price</p>";
+						}
+					}
+					else
+					{
+					echo "<p style='color:red;'>Image file size max 2 MB</p>";					
+					}
+				}else{
+					echo "<p style='color:red;'>Invalid file format..</p>";	
+				}
+			}
+		}
+		else{		
+			//header('Location: http://demo.maventricks.com/lalbook/index.php/account?id=1');
+			//redirect('account');
+			//echo "Please select image..!";
+		}	
+		//header('refresh: 1; url=http://demo.maventricks.com/lalbook/index.php/account');
+		//redirect('account');		
+		exit;
+		}
+	}
+	
 	
 	function change_password(){
 		$user_details = $this->common_model->getLoggedInUser();

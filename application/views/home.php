@@ -67,14 +67,14 @@
    
    <?php $this->load->view('home_search'); ?>
     <div class="clsReq clearfix">
-		<div class="clsPostReq" style="<?php echo $csstag;?>">
+		<div class="clsPostReq" style="<?php //echo $csstag;?>">
 			<a href="<?php echo site_url('requirement/create'); ?>"  id="hoverClassName">&nbsp;</a>
 		</div>
 		<div class="banImg clearfix">
-			<div class="clsLeftimg" style="<?php echo $cssleft;?>">
+			<div class="clsLeftimg" style="<?php //echo $cssleft;?>">
 				<a href="<?php echo site_url('requirement/create'); ?>">&nbsp;</a>
 			</div>
-			<div class="clsRightimg" style="<?php echo $cssright;?>">
+			<div class="clsRightimg" style="<?php //echo $cssright;?>">
 				<a href="<?php echo site_url('seller'); ?>" class="seller">&nbsp;</a>
 			</div>
 		</div>

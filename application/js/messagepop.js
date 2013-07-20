@@ -51,7 +51,7 @@ $(document).ready(function(){
     );
     
     $("#msgform").submit(function(){
-										
+		$(".ajax_loader").show();								
 		dataString = $("#msgform").serialize();  
 		$.ajax({
 		type: "POST",
@@ -61,13 +61,14 @@ $(document).ready(function(){
 		dataType: "json",
 		success: function(data) {  
 			if(data.success){ 
+				$(".ajax_loader").hide();
 				$(".msgformwrapper").css('display','none'); 
 				$("#msgform-success").fadeIn(500); 
 				window.location.reload();
 			}  
 			else
 			{
-				
+				$(".ajax_loader").hide();
 			  $('.msgformwrapper  .pof-error').removeClass('pof-error');
 			  $('.msgformwrapper  .errormsg').remove();
 			  for(var i=0 ; i < data.errors.length ; i++ )

@@ -21,20 +21,24 @@ li
 } 
 #amountedit
 {
- 
- font-style:normal;
+
+font-style:normal;
 font-variant:normal;
 font-weight:normal;
 line-height:normal;
 word-spacing:-0.04em;
+position:absolute;
+left:36%;
+top:80px;
 }
 .amountedit
 {
-	 width:350px;
-	 border:1px solid #d1d1d1;
-	 color:#333;
-	 background:#fff;
-	  
+width:350px;
+border:1px solid #d1d1d1;
+color:#333;
+background:#fff;
+z-index:999;
+
 }
 .amountedit img
 {

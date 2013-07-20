@@ -3642,6 +3642,104 @@ return TRUE;
 		}
 	
 	}
+	
+	function tomsg(){
+				
+		$return_arr = array();
+			
+		
+		$fromEmail = $this->config->item('site_admin_mail');
+		$subject = 'Message From Lalbook';
+		$to = $_POST['hidden_toemail'];
+
+		$to_id=$_POST['hidden_touid'];
+		$from_id=$_POST['hidden_fromuid'];
+		$jobid=$_POST['hidden_ujobid'];
+		$biddesc=$_POST['descrpt'];
+
+		
+		if($biddesc!=''){
+			
+			$query="insert into message(job_id,from_id,to_id,message,notification_status) values('$jobid','$to_id','$from_id','$biddesc','1')";
+			$query1 = $this->db->query($query);
+			
+			if($query1){
+				$message = '<html><body>';
+				$message .= '<div style="background:url('.base_url().'application/css/images/email_bg.png) no-repeat center;width:727px;height:318px;border:none;padding:20px 20px 0;margin:0 auto;">';
+				$message .='<h1 style="height:70px;margin:7px 0 0px;"><a href="#"><img src="'.base_url().'pplication/css/images/email_logo.png" alt="" style="border:none;"/></a></h1>';
+				$message .='<p style="font:12px Arial, Helvetica, sans-serif;color:#333;margin:10px 0 20px;">You have .. sent Message From Lalbook </p>';
+
+				$message .='<p style="font:bold 12px Arial, Helvetica, sans-serif;color:#333;margin:0 0 5px;">From Email : ' ."&nbsp;" .$fromEmail .'</p>'; 
+
+				$message .='<p style="font:bold 12px Arial, Helvetica, sans-serif;color:#333;margin:10px 0 5px;text-align:left;">Your Goals :</p>' ."&nbsp;" .$biddesc;
+
+				$message .='<p style="font:bold 12px Arial, Helvetica, sans-serif;color:#333;margin:20px 0 5px;">Best Regards,</p>';
+				$message .='<p style="font:bold 12px Arial, Helvetica, sans-serif;color:#333;margin:0 0 5px;">Lalbook</p>';
+				$message .= "</div>";
+				$message .= "</body></html>";
+				
+				$this->load->library('email');
+				$this->email->set_newline("\r\n");
+
+				
+				$this->email->from($fromEmail);
+
+				//$to = "mihir.mishra85@gmail.com";
+				$this->email->to($to);
+
+
+				$this->email->subject($subject);		
+				$this->email->message($message);
+
+				if($this->email->send()){
+				$return_arr["success"]= true;
+					echo json_encode($return_arr);
+				}else{
+					$return_arr["success"]= false;
+					echo json_encode($return_arr);
+				}
+			}
+
+
+		}
+	
+	}
+	
+	function editamt(){
+				
+		$return_arr = array();
+			
+		if(!isset($_POST['editdamount']) || trim($_POST['editdamount'])==""){ 
+			// echo "{'errors': [{'field': 'message','error': 'This field is required.'}], 'success': false}";
+			$return_arr["errors"]=array(array('field'=>'editdamount','error'=>'This field is required.'));
+			$return_arr["success"]= false;
+			echo json_encode($return_arr);
+			return ;
+		}
+		
+		$jobid=$_POST['hidden_bidamnt'];
+		$editedamt=$_POST['editdamount'];
+		if($editedamt!=''){
+			
+			
+			
+			$query1="update buy_requirement set awarded_amount=$editedamt where id=$jobid";
+			$query11 = $this->db->query($query1);
+			
+			$query2="update reviews set awarded_amount=$editedamt where job_id=$jobid";
+			$query22 = $this->db->query($query2);
+			
+			if($query11 && $query22){
+				$return_arr["success"]= true;
+				echo json_encode($return_arr);	 
+			}
+			
+
+		}
+
+		
+	
+	}
 
 } 
 ?>

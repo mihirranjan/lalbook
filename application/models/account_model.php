@@ -395,8 +395,27 @@ class Account_model extends CI_Model {
         $sql_city = "SELECT * FROM category where id='$industry_id'";
         
         $query = $this->db->query($sql_city);
-        return $query->row()->category;
+		//echo "<pre>";print_r($query->result());exit;
+        //return $query->row()->category;
 	}
+	
+	function industry($industry_id, $ind_id){
+		
+		if($industry_id==3){
+			$sql_city = "SELECT * FROM category ";
+		}else{
+			$sql_city = "SELECT * FROM category where cate_type='$industry_id'";
+		}	
+		
+		$query = $this->db->query($sql_city);
+		$result_city = $query->result();
+		foreach($result_city as $row_city){
+			$select = ($ind_id == $row_city->category) ? 'selected' : "";
+			echo "<option value='".$row_city->category."'".$select.">".$row_city->category."</option>";
+		}
+		
+	}
+	
 
 }
 // End account_model Class

@@ -69,6 +69,7 @@
 	 		$this->db->where($conditions);
 	 $this->db->from('gallery');
 		$this->db->join('users', 'users.id = gallery.creator_id','left');
+		$this->db->order_by('gallery.id','desc');
 	 	$this->db->select('gallery.id,gallery.price,gallery.description,gallery.gal_image,gallery.creator_id');
 		 
 		$result = $this->db->get();

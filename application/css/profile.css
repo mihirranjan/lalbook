@@ -89,7 +89,7 @@ ul.enlarge {
 	/*remove the bullet point*/
 	margin-left:0;
 	float:left;
-	width:528px;
+	width:768px;
 }
 ul.enlarge li {
 	margin:0 7px 15px 0 !important;
@@ -897,4 +897,31 @@ div#popup_content {
 }
 .clsAccDetails{
 	padding: 5px 0 0;
+}
+
+/* Added - Mihir*/
+.clsGalleryList li img:hover{
+	border:2px solid #FFD926;
+}
+
+.vnu-title {
+    background-color: rgba(0, 0, 0, 0.7);
+    bottom: 0px;
+    color: #FFFFFF;
+    display: block;
+    font-size: 11px;
+    height: 30px;
+    padding-left: 12px;
+    padding-top: 10px;
+    position: absolute;
+    width: 161px;
+	display:none;
+	z-index:9999999;
+}
+.vnu-title div{
+	float: right;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 6px 0 0;
+    padding: 0;
 }

@@ -503,10 +503,11 @@ class Account extends CI_Controller {
 				
 				  
 				  //Notification message
-				  $this->session->set_flashdata('flash_message', $this->common_model->flash_message('success',$this->lang->line('update_owner_confirm_success')));
-				  $this->session->set_userdata('profile_mode', 'view');
-				  redirect('information/index/success');
-				 // redirect('account/index');
+				 // $this->session->set_flashdata('flash_message', $this->common_model->flash_message('success',$this->lang->line('update_owner_confirm_success')));
+				  //$this->session->set_userdata('profile_mode', 'view');
+				  
+				  //redirect('information/index/success');
+				 redirect('account');
 		 	}  //Form Validation End
 			
 		} //If - Form Submission End	

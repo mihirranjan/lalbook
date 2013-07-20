@@ -24,7 +24,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/application/css/css/ratingpop.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/application/css/css/buyerpop.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/application/css/css/sllerpop.css" />
-
+<link href="<?php echo base_url(); ?>application/css/lalbook.css" rel="stylesheet" type="text/css" />
 <!--[if IE ]>
 <link href="css/iefix.css" rel="stylesheet" type="text/css" />
 <![endif]-->
@@ -52,7 +52,7 @@
 <script type="text/javascript" src='<?php echo base_url();?>application/js/fornotlogin.js'></script>
 
 <script type="text/javascript" src="<?php echo base_url();?>application/js/profile.js"></script>
-
+<script type="text/javascript" src='<?php echo base_url();?>application/js/lalbook.js'></script>
 </head>
 
 <body>

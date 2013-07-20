@@ -14,7 +14,7 @@ $(function () {
 });
 
 $(function () {
-    var ig = '<img src="<?php echo image_url();?>/minus.png" alt="" />';
+    var ig = '<img src="'+webroot+'/application/css/images/minus.png" alt="" />';
     var removeLink = '<a class="remove" href="#" onclick="$(this).parent().slideUp(function(){ $(this).remove() }); return false">' + ig + '</a>';
     $('a.add').relCopy({
         append: removeLink
@@ -37,6 +37,7 @@ $(document).ready(function () {
         $('#hideprof').show();
         $("#onupload").hide();
         $("#changeprofile").show();
+		 $('#tabs-1').hide();
     });
     $('#hideprof').click(function () {
         $('#prof').hide();
@@ -77,7 +78,6 @@ $(document).ready(function () {
         $("#changeprofile").show();
     });
     $('#tabs2').click(function () {
-        //alert("hi");
         $('#tabs-1').hide();
         $('#tabs-2').show();
         $('#tabs-3').hide();
@@ -118,18 +118,42 @@ $(document).ready(function () {
         $('#tabs-4').show();
         alert("Please Enter All Fields");
     }
-
+	
+	/*
     $('#photoimg').change(function () {
-        //alert("erro");
-        $("#previewid").html('');
-        $("#previewid").html('<img src="<?php echo image_url();?>/loader.gif" alt="Uploading...."/>');
-        $("#imageform").ajaxForm({
-            target: '#previewid'
-
-        }).submit();
+       
+		
+		
 
     });
-
+	*/
+	
+	$('#submitproduct').click(function () {
+		if($(".add_p_class").val() !="" ){
+			$("#previewid").html('<img src="'+webroot+'/application/css/images/ajax-loader.gif" alt="Uploading...."/>');
+			$("#imageform").ajaxForm({
+				target: '#previewid',
+				success: function(response) { 
+					$(".add_p_class").css("border", "1px solid #E1E1E1");
+					$(".upload_suc").show(); 
+					$(".add_p_class").val("");
+					var url = window.location.href; 
+					utl = url.replace('#', '');
+					url += (url.indexOf('?') > -1)?"&":"?" + "goto=gallery";
+					
+					var delay = 2000;
+					setTimeout(function(){ window.location.href = url; }, delay);
+				}
+			}).submit();
+		}else{
+			$(".add_p_class").css("border", "1px solid red");
+			return false;
+		}
+		
+	});
+	
+	
+	 
 
     $("a.popup").click(function () {
         loading(); // loading

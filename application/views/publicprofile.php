@@ -437,7 +437,7 @@ body{ font-family:Arial, Helvetica, sans-serif; font-size:13px; }
  $(document).ready(function() { 
  
             $('#photoimg').change(function(){ 
-			
+				alert("mmmsss");
 				$("#previewid").html('');
 				$("#previewid").html('<img src="loader.gif" alt="Uploading...."/>');
 			$("#imageform").ajaxForm({

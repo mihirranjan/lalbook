@@ -3,6 +3,45 @@
 
 $(document).ready(function() {
 	
+	//gallery 
+	$(".trigger").mouseover(function(){
+		$(this).next(".vnu-title").show();
+	});
+	$(".trigger").mouseout(function(){
+		$(this).next(".vnu-title").hide();
+	});
+	
+	$(".vnu-title").mouseover(function(){
+		$(this).show();
+	});
+	$(".vnu-title").mouseout(function(){
+		$(this).hide();
+	});
+	
+	$(".show").mouseover(function(){
+		$(this).parent().next().show();
+	});
+	$(".show").mouseout(function(){
+		$(this).parent().next().hide();
+	});
+	
+	
+	
+	//My Profile Tab Details to Edit
+	$(".edit_option").click(function() {
+		$(".profile_edit" ).show();
+		$(".view_details" ).hide(); 
+	});
+	$("#show_details").click(function() {
+		$(".profile_edit" ).hide();
+		$(".view_details" ).show(); 
+	});
+	$("#tabs1").click(function() {
+		$(".profile_edit" ).hide();
+		$(".view_details" ).show(); 
+	});
+	
+	
 	$(".list_id").attr("id","removetabs");
 	
 	//Draggable
@@ -18,8 +57,9 @@ $(document).ready(function() {
 	if($("#reqtype").val()!=""){
 		var reqtype = $("#reqtype").val();
 		var hdn_industry = $("#hdn_industry").val();
-		get_cities(reqtype, hdn_industry)
+		get_cities(reqtype, hdn_industry);
 	}
+	
 	
 	//Datepicker
 	var date = new Date();

@@ -277,9 +277,7 @@
 			<td class="terms border_class">
 				<input type="checkbox" name="terms"  id="help-us-terms" value="1" />
 			</td>
-			<td>
-				Please accept <a href="#" onclick="example_popup()" style="color:#C10001;">Terms of Service*</a>
-			</td>
+			<td style="width:100%;">Please accept <a href="#" onclick="example_popup()" style="color:#C10001;">Terms of Service*</a></td>
 		</tr>
 		</table>
 		<span id="terms"></span> 
